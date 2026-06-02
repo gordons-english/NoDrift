@@ -421,24 +421,26 @@ button {
 
 .kit-preview {
   display: grid;
-  grid-template-columns: minmax(138px, 0.52fr) minmax(0, 1fr);
+  grid-template-columns: minmax(180px, 0.52fr) minmax(0, 1fr);
   gap: 24px;
-  padding-top: 18px;
+  padding-top: 14px;
 }
 
 .kit-stack {
   position: relative;
-  min-height: 360px;
-  margin-top: 24px;
-  margin-right: 8px;
+  min-height: 526px;
+  margin-top: 14px;
+  margin-right: 12px;
 }
 
 .kit-sheet {
   position: absolute;
   display: grid;
   align-content: start;
-  min-height: 84px;
-  padding: 10px;
+  height: 90px;
+  min-height: 90px;
+  padding: 34px 10px 9px;
+  overflow: hidden;
   color: #152327;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: var(--radius);
@@ -450,7 +452,7 @@ button {
 .kit-sheet::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 12px;
   right: 12px;
   height: 4px;
@@ -461,15 +463,15 @@ button {
 .kit-sheet::after {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 24px;
   left: 12px;
   width: 58%;
   height: 3px;
   border-radius: 999px;
   background: rgba(21, 35, 39, 0.16);
   box-shadow:
-    0 15px 0 rgba(21, 35, 39, 0.12),
-    0 30px 0 rgba(21, 35, 39, 0.08);
+    0 11px 0 rgba(21, 35, 39, 0.12),
+    0 22px 0 rgba(21, 35, 39, 0.08);
 }
 
 .kit-sheet-primary {
@@ -477,68 +479,68 @@ button {
   top: 0;
   left: 0;
   right: 20px;
-  min-height: 88px;
-  padding-top: 45px;
+  min-height: 90px;
+  padding-top: 34px;
 }
 
 .kit-sheet-secondary {
   z-index: 6;
-  top: 52px;
+  top: 70px;
   left: 16px;
   right: 2px;
-  min-height: 88px;
+  min-height: 90px;
   transform: rotate(2deg);
-  padding-top: 45px;
+  padding-top: 34px;
 }
 
 .kit-sheet-tertiary {
   z-index: 5;
-  top: 104px;
+  top: 140px;
   left: 5px;
   right: 22px;
-  min-height: 88px;
+  min-height: 90px;
   transform: rotate(-2deg);
-  padding-top: 45px;
+  padding-top: 34px;
 }
 
 .kit-sheet-quaternary {
   z-index: 4;
-  top: 156px;
+  top: 210px;
   left: 18px;
   right: 0;
-  min-height: 88px;
+  min-height: 90px;
   transform: rotate(1.5deg);
-  padding-top: 45px;
+  padding-top: 34px;
 }
 
 .kit-sheet-quinary {
   z-index: 3;
-  top: 208px;
+  top: 280px;
   left: 3px;
   right: 20px;
-  min-height: 88px;
+  min-height: 90px;
   transform: rotate(-1.5deg);
-  padding-top: 45px;
+  padding-top: 34px;
 }
 
 .kit-sheet-senary {
   z-index: 2;
-  top: 260px;
+  top: 350px;
   left: 16px;
   right: 4px;
-  min-height: 88px;
+  min-height: 90px;
   transform: rotate(1deg);
-  padding-top: 45px;
+  padding-top: 34px;
 }
 
 .kit-sheet-septenary {
   z-index: 1;
-  top: 312px;
+  top: 420px;
   left: 5px;
   right: 18px;
-  min-height: 88px;
+  min-height: 90px;
   transform: rotate(-1deg);
-  padding-top: 45px;
+  padding-top: 34px;
 }
 
 .kit-sheet span,
@@ -562,8 +564,8 @@ button {
   z-index: 1;
   margin: 0 0 5px;
   color: #17262b;
-  font-size: 0.78rem;
-  line-height: 1.1;
+  font-size: 0.74rem;
+  line-height: 1.06;
 }
 
 .kit-sheet p {
@@ -571,8 +573,8 @@ button {
   z-index: 1;
   margin: 0;
   color: #526166;
-  font-size: 0.64rem;
-  line-height: 1.28;
+  font-size: 0.58rem;
+  line-height: 1.16;
 }
 
 .kit-details {
@@ -1679,9 +1681,9 @@ h3,
   }
 
   .kit-stack {
-    width: min(242px, 100%);
-    min-height: 358px;
-    margin-top: 24px;
+    width: min(252px, 100%);
+    min-height: 526px;
+    margin-top: 18px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1692,56 +1694,56 @@ h3,
 
   .kit-sheet-primary {
     right: 18px;
-    min-height: 88px;
-    padding-top: 45px;
+    min-height: 90px;
+    padding-top: 34px;
   }
 
   .kit-sheet-secondary {
-    top: 52px;
+    top: 70px;
     left: 16px;
     right: 0;
-    min-height: 88px;
-    padding-top: 45px;
+    min-height: 90px;
+    padding-top: 34px;
   }
 
   .kit-sheet-tertiary {
-    top: 104px;
+    top: 140px;
     left: 5px;
     right: 22px;
-    min-height: 88px;
-    padding-top: 45px;
+    min-height: 90px;
+    padding-top: 34px;
   }
 
   .kit-sheet-quaternary {
-    top: 156px;
+    top: 210px;
     left: 18px;
     right: 0;
-    min-height: 88px;
-    padding-top: 45px;
+    min-height: 90px;
+    padding-top: 34px;
   }
 
   .kit-sheet-quinary {
-    top: 208px;
+    top: 280px;
     left: 3px;
     right: 20px;
-    min-height: 88px;
-    padding-top: 45px;
+    min-height: 90px;
+    padding-top: 34px;
   }
 
   .kit-sheet-senary {
-    top: 260px;
+    top: 350px;
     left: 16px;
     right: 4px;
-    min-height: 88px;
-    padding-top: 45px;
+    min-height: 90px;
+    padding-top: 34px;
   }
 
   .kit-sheet-septenary {
-    top: 312px;
+    top: 420px;
     left: 5px;
     right: 18px;
-    min-height: 88px;
-    padding-top: 45px;
+    min-height: 90px;
+    padding-top: 34px;
   }
 
   .kit-list,

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template 04 - Capsule Source Coverage Report</title>
+    <meta name="description" content="Universal source coverage report template for carryover capsules." />
+    <link rel="stylesheet" href="template-pages.css" />
+  </head>
+  <body>
+    <header class="template-header">
+      <div class="page-shell">
+        <nav aria-label="Template navigation">
+          <a href="index.html">Template Index</a>
+          <a href="template-03-archive-lookup.html">Previous Template</a>
+          <a href="template-05-omission-report.html">Next Template</a>
+        </nav>
+        <p class="eyebrow">Template 04</p>
+        <h1>Capsule Source Coverage Report</h1>
+        <p class="lede">Use this to show exactly what sources were read, listed, searched, unavailable, or not inspected before trusting a carryover capsule.</p>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="instructions">
+        <h2>User Instructions</h2>
+        <p>
+          Fill this report before or alongside any serious carryover capsule. It protects the new chat from assuming the capsule is more complete than it really is. A filename, folder name, or search result is not proof of content.
+        </p>
+        <p>
+          The report should be honest even when incomplete. It is better to say a source was listed but not inspected than to imply it was read. If critical sources are unavailable, the capsule may need to be labeled partial or blocked.
+        </p>
+        <h3>Use this when</h3>
+        <ul>
+          <li>A capsule depends on workspace files, git state, browser QA, old chat history, or tool output.</li>
+          <li>The user needs to know whether a handoff is safe to trust.</li>
+          <li>You need to separate verified state from chat-visible or unknown state.</li>
+        </ul>
+        <h3>Do not use this when</h3>
+        <ul>
+          <li>You have not inspected anything and cannot label coverage accurately.</li>
+          <li>The user asked only for a quick conversational answer, not a reusable handoff.</li>
+        </ul>
+      </section>
+
+      <section class="template-block">
+        <h2>Blank Template</h2>
+        <pre><code>CAPSULE SOURCE COVERAGE REPORT
+
+Report for:
+[PROJECT_NAME_OR_BRANCH_NAME]
+
+Report status:
+[COMPLETE / PARTIAL / BLOCKED / NEEDS REVIEW]
+
+Workspace:
+[WORKSPACE_PATH]
+
+Project folder:
+[PROJECT_FOLDER_PATH]
+
+Governance pointer checked:
+- [WORKSPACE_AGENTS_PATH] - [READ / NOT READ / NOT AVAILABLE]
+- [PRIMARY_GOVERNANCE_PATH] - [READ / NOT READ / NOT AVAILABLE]
+- [SECONDARY_GOVERNANCE_PATH] - [READ / NOT READ / NOT AVAILABLE]
+- [PROJECT_GOVERNANCE_PATH_IF_ANY] - [READ / NOT READ / NOT AVAILABLE]
+
+Files read:
+| File | Label | Why Read | Key Coverage |
+|---|---|---|---|
+| [FILE_PATH] | FILE-VERIFIED | [REASON] | [WHAT IT COVERED] |
+
+Folders listed:
+| Folder | Label | Why Listed | Limitation |
+|---|---|---|---|
+| [FOLDER_PATH] | LISTED / NOT INSPECTED | [REASON] | Folder listing does not prove file contents. |
+
+Files listed but not inspected:
+| File | Label | Why Not Inspected | Risk |
+|---|---|---|---|
+| [FILE_PATH] | NOT INSPECTED | [REASON] | [LOW / MEDIUM / HIGH / CRITICAL] |
+
+Chat context used:
+| Chat Source | Label | What It Supports | Limitation |
+|---|---|---|---|
+| [CURRENT_CHAT / ARCHIVE_THREAD / USER_MESSAGE] | CHAT-VISIBLE | [DETAIL] | [LIMITATION] |
+
+Tool checks performed:
+| Tool / Check | Label | Result | Limitation |
+|---|---|---|---|
+| [GIT STATUS / BROWSER CHECK / SEARCH / LINK SCAN] | TOOL-VERIFIED | [RESULT] | [LIMITATION] |
+
+Sources not available:
+| Source | Needed For | Impact |
+|---|---|---|
+| [SOURCE] | [WHY NEEDED] | [IMPACT] |
+
+Sources intentionally not inspected:
+| Source | Reason | Safe To Omit? |
+|---|---|---|
+| [SOURCE] | [REASON] | [YES / NO / UNKNOWN] |
+
+Conflicts found:
+| Conflict | Sources | Current Handling |
+|---|---|---|
+| [CONFLICT] | [SOURCE A / SOURCE B] | [UNRESOLVED / CONTROLLING SOURCE / NEEDS USER DECISION] |
+
+Claims based only on filenames or folder names:
+[List any. These must not be treated as file-content proof.]
+
+Coverage limitation:
+[State what the capsule can safely support and what it cannot.]
+
+Coverage conclusion:
+Choose one:
+- SAFE TO USE WITH LIMITATIONS: [LIMITATIONS]
+- PARTIAL: [WHAT MUST BE VERIFIED]
+- BLOCKED: [WHAT IS MISSING]
+- NOT SAFE TO USE: [WHY]</code></pre>
+      </section>
+
+      <section class="question-block">
+        <h2>End Directive And Readiness Questions</h2>
+        <pre><code>DIRECTIVE TO THE NEW CHAT
+
+Before relying on the capsule, answer these questions from the source coverage report. Do not treat uninspected sources as verified.
+
+Governance understanding questions:
+1. Which governance files were read?
+2. Which governance files were only pointed to or not inspected?
+3. Which claims are file-verified?
+4. Which claims are chat-visible only?
+5. Which sources were not inspected?
+6. Are any claims based only on filenames or folder names?
+7. What do you do with conflicts?
+8. What must be verified before file work?
+9. What does the coverage conclusion allow you to do?
+10. What does the coverage conclusion prohibit?
+
+Source-material understanding questions:
+1. What core project files were read?
+2. What artifacts were not checked?
+3. What current status is verified?
+4. What current status is unverified?
+5. What source material is unavailable?
+6. What source material was intentionally not inspected?
+7. What conflicts were found?
+8. What limitations affect the capsule?
+9. What must be checked before the next action?
+10. Is the capsule safe, partial, blocked, or not safe?
+
+Final readiness statement:
+Choose one:
+- COVERAGE ACCEPTED WITH LIMITATIONS: [state limits]
+- NEEDS MORE VERIFICATION: [state sources]
+- BLOCKED: [state missing source]</code></pre>
+      </section>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="template-03-archive-lookup.html">Previous: Archive Lookup</a>
+        <a href="template-05-omission-report.html">Next: Omission Report</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">Universal template. Coverage reports prevent false confidence.</div>
+    </footer>
+  </body>
+</html>

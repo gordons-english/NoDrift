@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template 05 - Omission Report</title>
+    <meta name="description" content="Universal omission report template for carryover capsules." />
+    <link rel="stylesheet" href="template-pages.css" />
+  </head>
+  <body>
+    <header class="template-header">
+      <div class="page-shell">
+        <nav aria-label="Template navigation">
+          <a href="index.html">Template Index</a>
+          <a href="template-04-source-coverage-report.html">Previous Template</a>
+          <a href="template-06-new-chat-starter.html">Next Template</a>
+        </nav>
+        <p class="eyebrow">Template 05</p>
+        <h1>Omission Report</h1>
+        <p class="lede">Use this at the end of a capsule to prevent important operative detail from being quietly compressed, skipped, or hidden behind vague instructions.</p>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="instructions">
+        <h2>User Instructions</h2>
+        <p>
+          Fill this report after every serious capsule. The goal is to make omissions visible. If no known important operative detail was intentionally omitted, state that directly. If anything was omitted, state what, why, the risk, and whether it must be recovered before the new chat acts.
+        </p>
+        <p>
+          Do not use this report as permission to omit important context. It is a safety audit. If a missing item is high risk, the correct result may be BLOCKED until the source is recovered or the user approves proceeding with limitations.
+        </p>
+        <h3>Use this when</h3>
+        <ul>
+          <li>A capsule is intended to be pasted into a new chat.</li>
+          <li>The source history is long, compacted, or partly unavailable.</li>
+          <li>Important details may be too long to fit comfortably in one response.</li>
+        </ul>
+        <h3>Do not use this when</h3>
+        <ul>
+          <li>You plan to hide omissions for brevity.</li>
+          <li>The missing detail is required for safety and should block the handoff.</li>
+        </ul>
+      </section>
+
+      <section class="template-block">
+        <h2>Blank Template</h2>
+        <pre><code>OMISSION REPORT
+
+Report for:
+[PROJECT_NAME_OR_BRANCH_NAME]
+
+Capsule or document reviewed:
+[CAPSULE_NAME_OR_VERSION]
+
+Choose one:
+
+Option A:
+No known important operative details were intentionally omitted.
+
+Option B:
+Known omissions are listed below.
+
+Omitted items:
+| Item Omitted | Reason Omitted | Risk | Must Recover Before New Chat Acts? | Recovery Path |
+|---|---|---|---|---|
+| [DETAIL] | [WHY OMITTED] | [LOW / MEDIUM / HIGH / CRITICAL] | [YES / NO / UNKNOWN] | [FILE / ARCHIVE / USER / TOOL / UNKNOWN] |
+
+Compression warning:
+No important approved wording, decision, boundary, source rule, file status, QA result, risk, unresolved item, external-action limit, or next action may be omitted merely for brevity.
+
+Items too long for one capsule:
+| Item | Handling |
+|---|---|
+| [DETAIL] | [SPLIT INTO PARTS / ATTACH AS SEPARATE SECTION / RECOVER FROM FILE] |
+
+Items not included because they are not relevant:
+| Item | Reason Not Relevant |
+|---|---|
+| [DETAIL] | [REASON] |
+
+Unknown whether omitted:
+[State any area where visibility is insufficient to know whether something important is missing.]
+
+Omission risk conclusion:
+Choose one:
+- NO KNOWN IMPORTANT OMISSIONS
+- SAFE WITH LISTED OMISSIONS
+- PARTIAL, RECOVERY RECOMMENDED
+- BLOCKED UNTIL RECOVERY
+- NOT SAFE TO USE</code></pre>
+      </section>
+
+      <section class="question-block">
+        <h2>End Directive And Readiness Questions</h2>
+        <pre><code>DIRECTIVE TO THE NEW CHAT
+
+Before relying on the capsule, answer these questions from the omission report. Do not proceed as if missing high-risk information is harmless.
+
+Governance understanding questions:
+1. Were any important operative details intentionally omitted?
+2. Why were they omitted?
+3. What risk level was assigned to each omission?
+4. Which omissions must be recovered before action?
+5. What recovery path is available?
+6. Does any omission require stopping?
+7. Was anything omitted merely for brevity?
+8. Are any omissions unknown because the source is unavailable?
+9. What does the omission risk conclusion permit?
+10. What does the omission risk conclusion prohibit?
+
+Source-material understanding questions:
+1. What project facts are incomplete?
+2. What approved wording is missing?
+3. What decisions are missing?
+4. What files or artifacts are missing?
+5. What QA or verification status is missing?
+6. What risks are missing?
+7. What open questions are missing?
+8. What external-action boundaries are missing?
+9. Can the next safe action proceed without the omitted item?
+10. What must be recovered before responsibility transfers?
+
+Final readiness statement:
+Choose one:
+- OMISSIONS ACCEPTED WITH LIMITATIONS: [state limits]
+- RECOVERY NEEDED: [state items]
+- BLOCKED: [state missing critical detail]</code></pre>
+      </section>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="template-04-source-coverage-report.html">Previous: Source Coverage</a>
+        <a href="template-06-new-chat-starter.html">Next: New Chat Starter</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">Universal template. Omissions must be visible, labeled, and risk-assessed.</div>
+    </footer>
+  </body>
+</html>

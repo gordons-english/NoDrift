@@ -1,0 +1,259 @@
+:root {
+  --bg: #071014;
+  --panel: #101b20;
+  --panel-2: #142329;
+  --line: rgba(210, 232, 235, 0.16);
+  --text: #e8eeec;
+  --muted: #aebcc0;
+  --dim: #7f9196;
+  --teal: #6fd7d3;
+  --green: #7bdc86;
+  --gold: #e7b24c;
+  --red: #ff6464;
+  --radius: 8px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(111, 215, 211, 0.08), transparent 28rem),
+    linear-gradient(180deg, #071014 0%, #0a1519 58%, #081116 100%);
+  letter-spacing: 0;
+}
+
+a {
+  color: var(--teal);
+}
+
+.page-shell {
+  width: min(1120px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.template-header {
+  padding: 30px 0 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.template-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.template-header nav a {
+  text-decoration: none;
+  font-weight: 750;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 900px;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(2.25rem, 5vw, 4.4rem);
+  line-height: 1.02;
+}
+
+.lede {
+  max-width: 850px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+main {
+  padding: 30px 0 70px;
+}
+
+.instructions,
+.template-block,
+.question-block,
+.note-panel,
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.instructions {
+  padding: 24px;
+  border-color: rgba(231, 178, 76, 0.34);
+  background:
+    linear-gradient(135deg, rgba(231, 178, 76, 0.11), transparent 40%),
+    rgba(255, 255, 255, 0.035);
+}
+
+.instructions h2,
+.template-block h2,
+.question-block h2,
+.note-panel h2,
+.card h2 {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.instructions h3,
+.template-block h3,
+.question-block h3,
+.note-panel h3,
+.card h3 {
+  margin: 22px 0 10px;
+  color: var(--text);
+  font-size: 1.02rem;
+}
+
+p,
+li {
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card {
+  display: grid;
+  align-content: start;
+  min-height: 190px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: rgba(111, 215, 211, 0.48);
+}
+
+.card span {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.card strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--text);
+  font-size: 1.18rem;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.template-block,
+.question-block,
+.note-panel {
+  margin-top: 20px;
+  padding: 24px;
+}
+
+.label-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.label-list li {
+  padding: 7px 9px;
+  color: var(--teal);
+  border: 1px solid rgba(111, 215, 211, 0.34);
+  border-radius: 999px;
+  background: rgba(111, 215, 211, 0.05);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+pre {
+  overflow-x: auto;
+  margin: 16px 0 0;
+  padding: 18px;
+  color: #dfe8e8;
+  background: #050b0e;
+  border: 1px solid rgba(210, 232, 235, 0.14);
+  border-radius: var(--radius);
+  line-height: 1.48;
+  white-space: pre-wrap;
+}
+
+code {
+  font-family: "Cascadia Mono", Consolas, "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+.warning {
+  border-left: 4px solid var(--red);
+  padding-left: 14px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-nav a {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer {
+  padding: 22px 0;
+  color: var(--dim);
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instructions,
+  .template-block,
+  .question-block,
+  .note-panel,
+  .card {
+    padding: 18px;
+  }
+}

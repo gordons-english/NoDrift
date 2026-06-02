@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template 03 - Archive Lookup Instruction</title>
+    <meta name="description" content="Universal archive lookup instruction template." />
+    <link rel="stylesheet" href="template-pages.css" />
+  </head>
+  <body>
+    <header class="template-header">
+      <div class="page-shell">
+        <nav aria-label="Template navigation">
+          <a href="index.html">Template Index</a>
+          <a href="template-02-branch-discussion.html">Previous Template</a>
+          <a href="template-04-source-coverage-report.html">Next Template</a>
+        </nav>
+        <p class="eyebrow">Template 03</p>
+        <h1>Archive Lookup Instruction</h1>
+        <p class="lede">Use this when a new chat may need to consult an original long chat for missing project-specific history without importing unrelated context.</p>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="instructions">
+        <h2>User Instructions</h2>
+        <p>
+          Fill this template when important context may exist in an original archive chat. The archive is a recovery source, not automatic file truth. The new chat should consult current project files first, then use archive lookup only within the authorized project-specific scope.
+        </p>
+        <p>
+          Make the lookup boundary narrow. Archive searches must not pull in unrelated projects, old proposals, emotional context, stale decisions, or assumptions. If the archive is unavailable or the detail cannot be found, label the item UNKNOWN or NOT FOUND.
+        </p>
+        <h3>Use this when</h3>
+        <ul>
+          <li>Approved wording or decisions may be chat-only.</li>
+          <li>The new chat needs permission to search old context for a specific project.</li>
+          <li>A full capsule identifies archive-dependent unknowns.</li>
+        </ul>
+        <h3>Do not use this when</h3>
+        <ul>
+          <li>The archive would expose unrelated private or sensitive material without approval.</li>
+          <li>The current files already answer the question.</li>
+          <li>The goal is broad curiosity rather than a specific recovery need.</li>
+        </ul>
+      </section>
+
+      <section class="template-block">
+        <h2>Blank Template</h2>
+        <pre><code>ARCHIVE LOOKUP INSTRUCTION
+
+Project or branch:
+[PROJECT_NAME_OR_BRANCH_NAME]
+
+Workspace:
+[WORKSPACE_PATH]
+
+Project folder:
+[PROJECT_FOLDER_PATH]
+
+Archive location or identifier:
+[ORIGINAL_ARCHIVE_THREAD_TITLE_OR_ID_IF_KNOWN]
+
+Governance pointer:
+Before archive lookup, apply:
+- [WORKSPACE_AGENTS_PATH]
+- [PRIMARY_GOVERNANCE_PATH]
+- [SECONDARY_GOVERNANCE_PATH]
+- [PROJECT_GOVERNANCE_PATH_IF_ANY]
+
+Archive purpose:
+The original chat remains an archive and fallback. It is not automatically controlling file truth.
+
+Allowed lookup scope:
+Search only for [PROJECT_NAME_OR_BRANCH_NAME]-specific information.
+
+Lookup allowed only when:
+- [USER_PERMISSION_CONDITION]
+- [SPECIFIC_LOOKUP_CONDITION]
+- [MISSING_CONTEXT_CONDITION]
+
+Permitted archive targets:
+- exact approved wording
+- approved decisions
+- rejected or superseded options
+- file paths
+- QA or verification results
+- open questions
+- boundaries and actions not authorized
+- next safe actions
+- source hierarchy decisions
+
+Forbidden archive imports:
+- unrelated project facts
+- unrelated personal context
+- old proposals treated as approval
+- stale information that conflicts with current files
+- assistant suggestions that were never approved
+- emotional context not needed for the project task
+- broad summaries that hide uncertainty
+
+Search procedure:
+1. State the exact missing item.
+2. Search or read only the archive scope needed for that item.
+3. Report what was found with labels.
+4. Report what was not found.
+5. Compare archive findings against current files and the user's newest instruction.
+6. Stop before acting if there is a conflict.
+
+Conflict rule:
+If archive history conflicts with current files, current governance, or the user's newest instruction, report the conflict and stop before acting.
+
+Unavailable archive rule:
+If the archive cannot be accessed, label the needed item UNKNOWN / ARCHIVE NOT AVAILABLE. Do not reconstruct from memory.
+
+Output required after lookup:
+- What was searched
+- What was found
+- Source label for each finding
+- What remains unknown
+- Whether any conflict exists
+- Whether the new chat can proceed</code></pre>
+      </section>
+
+      <section class="question-block">
+        <h2>End Directive And Readiness Questions</h2>
+        <pre><code>DIRECTIVE TO THE NEW CHAT
+
+Before using the original archive, answer these questions. Do not search broadly or import unrelated context. Do not act on archive material until conflicts and source labels are clear.
+
+Governance understanding questions:
+1. When may you search the archive?
+2. What project or branch may you search for?
+3. What may you search for?
+4. What must you not import?
+5. What do you do if archive material conflicts with current files?
+6. What do you do if archive access fails?
+7. What label applies to archive-only information?
+8. Does archive information override current files automatically?
+9. What sensitive or unrelated material must be ignored?
+10. What must be reported after lookup?
+
+Source-material understanding questions:
+1. What project-specific facts are missing?
+2. Why is archive lookup needed?
+3. Which archive details are needed before work?
+4. What exact terms or decisions will you search for?
+5. What did you find?
+6. What remains UNKNOWN or NOT FOUND?
+7. Does anything found change current project state?
+8. Does anything found conflict with current files?
+9. What is the safest next action after lookup?
+10. Can work proceed without the missing item?
+
+Final readiness statement:
+Choose one:
+- READY TO LOOK UP: [scope]
+- LOOKUP NOT NEEDED: [why]
+- NOT READY: [missing permission or scope]
+- BLOCKED: [archive inaccessible or conflict unresolved]</code></pre>
+      </section>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="template-02-branch-discussion.html">Previous: Branch / Discussion</a>
+        <a href="template-04-source-coverage-report.html">Next: Source Coverage</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">Universal template. Archive lookup is narrow recovery, not broad import.</div>
+    </footer>
+  </body>
+</html>

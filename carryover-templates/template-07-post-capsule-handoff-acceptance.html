@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template 07 - Post-Capsule Handoff Acceptance</title>
+    <meta name="description" content="Universal post-capsule handoff acceptance template." />
+    <link rel="stylesheet" href="template-pages.css" />
+  </head>
+  <body>
+    <header class="template-header">
+      <div class="page-shell">
+        <nav aria-label="Template navigation">
+          <a href="index.html">Template Index</a>
+          <a href="template-06-new-chat-starter.html">Previous Template</a>
+        </nav>
+        <p class="eyebrow">Template 07</p>
+        <h1>Post-Capsule Handoff Acceptance</h1>
+        <p class="lede">Use this as the transfer test. The new chat must answer before it assumes responsibility, and the original chat can review the answers.</p>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="instructions">
+        <h2>User Instructions</h2>
+        <p>
+          Paste this after the capsule or keep it as the final section of the capsule. The new chat must answer the questions before project work continues. The user can then paste the answers back into the original chat for review.
+        </p>
+        <p>
+          This creates a two-chat verification loop. The new chat proves what it understands. The original chat reviews whether the transfer is safe, incomplete, or confused. This does not authorize file work by itself.
+        </p>
+        <h3>Use this when</h3>
+        <ul>
+          <li>A new chat is expected to take over a project or branch.</li>
+          <li>The original chat remains the archive and reviewer.</li>
+          <li>The handoff contains important boundaries, approved wording, open questions, or risks.</li>
+        </ul>
+        <h3>Do not use this when</h3>
+        <ul>
+          <li>The new chat has not received the capsule.</li>
+          <li>The user does not want a handoff review loop.</li>
+          <li>The new chat is not expected to continue the project.</li>
+        </ul>
+      </section>
+
+      <section class="template-block">
+        <h2>Blank Template</h2>
+        <pre><code>POST-CAPSULE HANDOFF ACCEPTANCE
+
+Instruction to new chat:
+Before doing project or branch work, answer the following questions. The user will paste your answers back into the original chat for review. Do not change files, create artifacts, publish, send, share, deploy, stage, commit, push, configure accounts, or perform external actions unless the user explicitly authorizes that specific action after the handoff is understood.
+
+Review status:
+[TO BE COMPLETED BY NEW CHAT]
+
+Governance understanding questions:
+1. Which governance files or protocols control this chat?
+2. Does the capsule replace those governance files or protocols?
+3. What actions are not authorized by the capsule?
+4. What actions require explicit user approval?
+5. What source labels will you use?
+6. What must be verified before file work?
+7. What must be verified before claiming something is current, fixed, working, complete, published, synced, or ready?
+8. What do you do if the capsule, archive, and current files conflict?
+9. When may you consult the original archive?
+10. What unrelated context must you exclude?
+11. What would make you stop instead of proceed?
+12. What is your responsibility if information is UNKNOWN, NOT VISIBLE, or NOT INSPECTED?
+
+Source-material understanding questions:
+1. What is the project or branch name?
+2. What is the physical workspace?
+3. What is the physical project folder?
+4. What is the project or branch purpose?
+5. What is the current status?
+6. What source files or artifacts are involved?
+7. What files or artifacts should be read first?
+8. What exact approved wording or decisions must be preserved?
+9. What has already been completed?
+10. What files were touched or left untouched?
+11. What verification has already been performed?
+12. What is not verified?
+13. What open questions remain?
+14. What risks or unresolved confusion remain?
+15. What external actions are not authorized?
+16. What is the next safe action?
+17. What must not be done yet?
+18. What information, if any, is missing before you can take responsibility?
+
+New chat self-assessment:
+- Strongest understanding:
+[ANSWER]
+
+- Weakest or most uncertain area:
+[ANSWER]
+
+- Required recovery before work:
+[ANSWER]
+
+- Ready level:
+[READY WITH LIMITATIONS / NOT READY / BLOCKED]
+
+Final readiness statement:
+Choose one:
+- READY WITH LIMITATIONS: [state limitations and next safe action]
+- NOT READY: [state what is missing]
+- BLOCKED: [state what must be recovered or verified]</code></pre>
+      </section>
+
+      <section class="note-panel">
+        <h2>Original Chat Review Instruction</h2>
+        <pre><code>INSTRUCTION TO ORIGINAL CHAT REVIEWER
+
+Review the new chat's handoff answers against the original capsule and available verified context.
+
+Classify the transfer as:
+- ACCEPTED: New chat can proceed within stated limits.
+- ACCEPTED WITH CORRECTIONS: New chat can proceed after corrections are pasted into it.
+- NOT READY: New chat missed important context, boundary, or source status.
+- BLOCKED: Critical context is missing, conflicting, or unsafe.
+
+Reviewer checks:
+1. Did the new chat identify the controlling governance pointers?
+2. Did it avoid treating the capsule as file truth?
+3. Did it identify actions not authorized?
+4. Did it preserve exact approved wording and decisions?
+5. Did it label unknowns and unverified items?
+6. Did it exclude unrelated project context?
+7. Did it understand archive lookup limits?
+8. Did it identify current files and artifacts?
+9. Did it identify open questions and risks?
+10. Did it state a safe next action?
+
+Reviewer response:
+[ACCEPTED / ACCEPTED WITH CORRECTIONS / NOT READY / BLOCKED]
+
+Required corrections to send back to new chat:
+[LIST CORRECTIONS OR SAY NONE]</code></pre>
+      </section>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="template-06-new-chat-starter.html">Previous: New Chat Starter</a>
+        <a href="index.html">Back to index</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">Universal template. Handoff acceptance tests understanding before transfer.</div>
+    </footer>
+  </body>
+</html>

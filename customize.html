@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>No Drift - Customize Your Setup</title>
+    <meta
+      name="description"
+      content="A local customization preview for the No Drift user communication profile."
+    />
+    <link rel="stylesheet" href="styles.css?v=wordmark-1" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="No Drift customization navigation">
+      <a class="brand" href="index.html#top" aria-label="Back to No Drift home">
+        <span class="brand-name"><span class="wordmark-no">No</span> <span class="wordmark-drift">Drift</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Customization links">
+        <a href="index.html#top">Overview</a>
+        <a href="free-preview.html">Free Preview</a>
+        <a href="audit-summary.html">Audit Summary</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a class="header-action" href="index.html#included">Back To Kit</a>
+    </header>
+
+    <main class="subpage-main">
+      <section class="section-shell subpage-hero">
+        <p class="eyebrow">User communication profile</p>
+        <h1>Personalize how Codex works with you.</h1>
+        <p class="hero-subtitle">
+          Configure how Codex communicates, leads work, asks questions, explains decisions, and reports evidence
+          without changing what Codex must verify.
+        </p>
+        <p class="supporting-line">
+          Token savings should come only from communication-style choices, never from reducing verification, source
+          fidelity, privacy protection, approval gates, or external-action safeguards.
+        </p>
+      </section>
+
+      <section class="section-shell customization-shell" aria-label="Customization demo">
+        <div class="customization-form" data-profile-demo>
+          <section class="settings-group" aria-labelledby="workflow-settings-heading">
+            <div class="group-heading">
+              <span class="group-label">Workflow settings</span>
+              <h2 id="workflow-settings-heading">How the work moves</h2>
+              <p>These choices shape who leads, when Codex asks, and how approval stays visible.</p>
+            </div>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">1</span>
+                <h2>Working Profile</h2>
+                <p>Choose a preset starting point. This moves the settings below.</p>
+                <p class="setting-detail">If you change any setting manually, the current profile becomes Custom.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Working Profile" data-summary-section="profile">
+                <button type="button" class="choice-button" data-profile="fast" data-choice="Fast Work">Fast Work</button>
+                <button type="button" class="choice-button is-selected" data-profile="standard" data-choice="Standard Work">Standard Work</button>
+                <button type="button" class="choice-button" data-profile="guided" data-choice="Guided Work">Guided Work</button>
+                <button type="button" class="choice-button" data-profile="deep" data-choice="Deep Support">Deep Support</button>
+              </div>
+            </article>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">2</span>
+                <h2>Work Leadership</h2>
+                <p>Controls who identifies the next task and how Codex moves through approved work.</p>
+                <p class="setting-detail">Approved Task Queue means Codex works through a list you already approved and stops at new boundaries, risks, unclear decisions, or external actions.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Work Leadership" data-summary-section="workflow">
+                <button type="button" class="choice-button" data-choice="User Leads">User Leads</button>
+                <button type="button" class="choice-button" data-choice="Recommend Next Step">Recommend Next Step</button>
+                <button type="button" class="choice-button is-selected" data-choice="Codex Leads With Approval">Codex Leads With Approval</button>
+                <button type="button" class="choice-button" data-choice="Approved Task Queue">Approved Task Queue</button>
+              </div>
+            </article>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">3</span>
+                <h2>Question Handling</h2>
+                <p>Controls how Codex handles small decisions during work.</p>
+                <p class="setting-detail">Continue If Clear means Codex keeps working only when the next step is already approved, low-risk, and obvious from the task.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Question Handling" data-summary-section="workflow">
+                <button type="button" class="choice-button" data-choice="Continue If Clear">Continue If Clear</button>
+                <button type="button" class="choice-button is-selected" data-choice="Group Questions">Group Questions</button>
+                <button type="button" class="choice-button" data-choice="One Question At A Time">One Question At A Time</button>
+                <button type="button" class="choice-button" data-choice="Ask Before Major Steps">Ask Before Major Steps</button>
+              </div>
+            </article>
+          </section>
+
+          <section class="settings-group" aria-labelledby="communication-settings-heading">
+            <div class="group-heading">
+              <span class="group-label">Communication settings</span>
+              <h2 id="communication-settings-heading">What affects estimated token use</h2>
+              <p>The estimate is based on these communication choices. It is not a guarantee, because real token use still depends on the task and source material.</p>
+            </div>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">4</span>
+                <h2>Communication Detail</h2>
+                <p>Controls how much Codex includes beyond the direct answer.</p>
+                <p class="setting-detail">Moving right adds more context, reasoning, examples, tradeoffs, risks, and next-step explanation.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Communication Detail" data-summary-section="communication">
+                <button type="button" class="choice-button" data-token-score="1" data-choice="Direct Answer">Direct Answer</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Short Context">Short Context</button>
+                <button type="button" class="choice-button" data-token-score="3" data-choice="Fuller Context">Fuller Context</button>
+                <button type="button" class="choice-button" data-token-score="4" data-choice="Complete Explanation">Complete Explanation</button>
+              </div>
+            </article>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">5</span>
+                <h2>Language Level</h2>
+                <p>Controls how technical Codex sounds when explaining work, files, commands, decisions, risks, or next steps.</p>
+                <p class="setting-detail">Moving right uses more precise terminology and assumes more comfort with technical language.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Language Level" data-summary-section="communication">
+                <button type="button" class="choice-button" data-token-score="1" data-choice="Plain Language">Plain Language</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Light Technical">Light Technical</button>
+                <button type="button" class="choice-button" data-token-score="3" data-choice="Technical When Useful">Technical When Useful</button>
+                <button type="button" class="choice-button" data-token-score="4" data-choice="Full Technical">Full Technical</button>
+              </div>
+            </article>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">6</span>
+                <h2>Progress Updates</h2>
+                <p>Controls how much Codex reports during longer work.</p>
+                <p class="setting-detail">Moving right shows more of what Codex checked, changed, found, verified, and still needs from you.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Progress Updates" data-summary-section="communication">
+                <button type="button" class="choice-button" data-token-score="1" data-choice="Final Result Only">Final Result Only</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Milestone Updates">Milestone Updates</button>
+                <button type="button" class="choice-button" data-token-score="3" data-choice="Regular Updates">Regular Updates</button>
+                <button type="button" class="choice-button" data-token-score="4" data-choice="Detailed Work Log">Detailed Work Log</button>
+              </div>
+            </article>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">7</span>
+                <h2>Explanation Level</h2>
+                <p>Controls how much Codex explains while working.</p>
+                <p class="setting-detail">Moving right adds more explanation, instruction, and advanced context while Codex does the work.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Explanation Level" data-summary-section="communication">
+                <button type="button" class="choice-button" data-token-score="1" data-choice="Just Do The Work">Just Do The Work</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Brief Notes">Brief Notes</button>
+                <button type="button" class="choice-button" data-token-score="3" data-choice="Step By Step">Step By Step</button>
+                <button type="button" class="choice-button" data-token-score="4" data-choice="Advanced Context">Advanced Context</button>
+              </div>
+            </article>
+
+            <article class="choice-panel">
+              <div>
+                <span class="choice-kicker">8</span>
+                <h2>Evidence Status</h2>
+                <p>Controls how visibly Codex marks whether information is verified, user-reported, assumed, not inspected, unknown, or needs confirmation.</p>
+                <p class="setting-detail">Moving right gives more visible evidence labels and more explanation of why the status matters.</p>
+              </div>
+              <div class="choice-grid" data-choice-group="Evidence Status" data-summary-section="communication">
+                <button type="button" class="choice-button" data-token-score="1" data-choice="Critical Status Only">Critical Status Only</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Basic Status Labels">Basic Status Labels</button>
+                <button type="button" class="choice-button" data-token-score="3" data-choice="Detailed Source Labels">Detailed Source Labels</button>
+                <button type="button" class="choice-button" data-token-score="4" data-choice="Full Evidence Status">Full Evidence Status</button>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <aside class="profile-summary" aria-label="Current customization summary">
+          <h2>Current Setup</h2>
+
+          <div class="summary-card profile-card">
+            <h3>Working Profile</h3>
+            <strong data-current-profile>Standard Work</strong>
+            <p data-profile-note>Preset profile. Manual changes will mark this as Custom.</p>
+          </div>
+
+          <div class="summary-card estimate-card">
+            <h3>Estimated Token Use</h3>
+            <div class="score-display">
+              <strong data-token-score>2.0</strong>
+              <span>out of 4</span>
+            </div>
+            <p data-token-label>Efficient-balanced</p>
+            <div class="token-meter" aria-hidden="true">
+              <span data-token-meter></span>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <h3>Workflow Settings</h3>
+            <dl data-workflow-summary></dl>
+          </div>
+
+          <div class="summary-card">
+            <h3>Communication Settings</h3>
+            <dl data-communication-summary></dl>
+          </div>
+
+          <div class="summary-card token-contributors">
+            <h3>Token Contributors</h3>
+            <div data-token-contributors></div>
+          </div>
+
+          <div class="locked-rules">
+            <h3>Always Protected Rules</h3>
+            <p>Customization does not alter, reduce, or compromise verification, source fidelity, privacy protection, approval gates, or external-action rules.</p>
+          </div>
+          <button class="button button-primary" type="button" data-placeholder="This local demo does not save settings yet. The full kit uses the editable User Communication Profile template.">
+            Save As Profile - Demo Only
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>No Drift - V1 English Codex Edition</span>
+      <span>Created and copyrighted by Don Gordon.</span>
+      <span>Copyright (c) 2026 Don Gordon. All rights reserved.</span>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template 06 - New Chat Starter Prompt</title>
+    <meta name="description" content="Universal new chat starter prompt template." />
+    <link rel="stylesheet" href="template-pages.css" />
+  </head>
+  <body>
+    <header class="template-header">
+      <div class="page-shell">
+        <nav aria-label="Template navigation">
+          <a href="index.html">Template Index</a>
+          <a href="template-05-omission-report.html">Previous Template</a>
+          <a href="template-07-post-capsule-handoff-acceptance.html">Next Template</a>
+        </nav>
+        <p class="eyebrow">Template 06</p>
+        <h1>New Chat Starter Prompt</h1>
+        <p class="lede">Use this as the opening instruction after a full capsule is pasted into a new chat, so the new chat verifies before acting.</p>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="instructions">
+        <h2>User Instructions</h2>
+        <p>
+          Paste this starter after the filled capsule in the new chat. It tells the new chat to locate the workspace, read the governing files, verify project files, report understanding, and wait before any state-changing action.
+        </p>
+        <p>
+          This starter prompt is not a substitute for the full capsule. It is the first-action command for the new chat. Keep it short enough to be operational, but specific enough to prevent premature file work or false status claims.
+        </p>
+        <h3>Use this when</h3>
+        <ul>
+          <li>A new chat has just received a full project or branch capsule.</li>
+          <li>The new chat must verify current files before acting.</li>
+          <li>You want a clean first response from the new chat.</li>
+        </ul>
+        <h3>Do not use this when</h3>
+        <ul>
+          <li>The full capsule has not been pasted yet.</li>
+          <li>You want the new chat to create, edit, publish, or send immediately without verification.</li>
+          <li>The workspace or project folder is unknown.</li>
+        </ul>
+      </section>
+
+      <section class="template-block">
+        <h2>Blank Template</h2>
+        <pre><code>NEW CHAT STARTER PROMPT
+
+You are continuing:
+[PROJECT_NAME_OR_BRANCH_NAME]
+
+Workspace:
+[WORKSPACE_PATH]
+
+Project folder:
+[PROJECT_FOLDER_PATH]
+
+Capsule status:
+[CAPSULE_STATUS]
+
+First actions:
+1. Read the governance files or protocol listed in the capsule.
+2. Verify that the current workspace is [WORKSPACE_PATH].
+3. Verify that the project folder exists at [PROJECT_FOLDER_PATH].
+4. Verify current git/workspace state if file work may occur.
+5. Read the project first-read files listed in the capsule.
+6. Compare the capsule against current files and the user's newest instruction.
+7. Report current understanding, limitations, and unknowns.
+8. Answer the handoff readiness questions.
+9. Wait for user review or explicit task approval before changing state.
+
+Do not:
+- edit files
+- create files
+- move files
+- delete files
+- rename files
+- stage files
+- commit
+- push
+- publish
+- upload
+- send
+- share
+- deploy
+- configure accounts
+- activate payments
+- rely on archive chat without permission
+
+This capsule is a handoff, not file truth. Current files, active governance, and the user's newest instruction control if they conflict.
+
+If the workspace or project folder is inaccessible:
+Stop and report exactly what is missing.
+
+If the capsule is incomplete:
+Label missing information UNKNOWN / NOT VISIBLE / NOT INSPECTED. Do not invent.
+
+If archive lookup is needed:
+Ask for or confirm permission according to the archive lookup instruction in the capsule.
+
+First response required:
+1. State whether the workspace and project folder were verified.
+2. State which governance files or protocol you read.
+3. State which first-read files you inspected.
+4. State any conflicts, unknowns, or unavailable sources.
+5. Answer the handoff readiness questions or explain why you cannot.</code></pre>
+      </section>
+
+      <section class="question-block">
+        <h2>End Directive And Readiness Questions</h2>
+        <pre><code>DIRECTIVE TO THE NEW CHAT
+
+Before taking responsibility, answer these questions. The user may bring your answers back to the original chat for review.
+
+Governance understanding questions:
+1. What are you forbidden to do now?
+2. What must you verify first?
+3. Which files or protocols govern your operation?
+4. What requires explicit user approval?
+5. What happens if current files conflict with the capsule?
+6. What happens if the workspace is inaccessible?
+7. What happens if the project folder is missing?
+8. What happens if archive lookup is needed?
+9. What source labels will you use for missing information?
+10. What should your first response include?
+
+Source-material understanding questions:
+1. What project or branch are you continuing?
+2. Where is the workspace?
+3. Where is the project folder?
+4. What first-read files will you inspect?
+5. What is the latest known status from the capsule?
+6. What must be verified against files?
+7. What unknowns are already visible?
+8. What is the next safe response to the user?
+9. What must not be done yet?
+10. What would make you not ready?
+
+Final readiness statement:
+Choose one:
+- READY TO VERIFY: [state next verification]
+- NOT READY: [state missing path or source]
+- BLOCKED: [state inaccessible workspace, missing project folder, or conflicting instruction]</code></pre>
+      </section>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="template-05-omission-report.html">Previous: Omission Report</a>
+        <a href="template-07-post-capsule-handoff-acceptance.html">Next: Handoff Acceptance</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">Universal template. A starter prompt starts verification, not file work.</div>
+    </footer>
+  </body>
+</html>

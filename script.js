@@ -17,6 +17,23 @@ document.querySelectorAll("[data-placeholder]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-menu-toggle]").forEach((button) => {
+  const header = button.closest(".site-header");
+  if (!header) return;
+
+  button.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("is-menu-open");
+    button.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  header.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("is-menu-open");
+      button.setAttribute("aria-expanded", "false");
+    });
+  });
+});
+
 const currentProfile = document.querySelector("[data-current-profile]");
 const profileNote = document.querySelector("[data-profile-note]");
 const workflowSummary = document.querySelector("[data-workflow-summary]");

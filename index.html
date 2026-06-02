@@ -8,14 +8,17 @@
       name="description"
       content="No Drift is a Codex governance kit built to systematically reduce hallucinations, drift, blind agreement, stale answers, and lost context."
     />
-    <link rel="stylesheet" href="styles.css?v=customization-balance-1" />
+    <link rel="stylesheet" href="styles.css?v=mobile-menu-1" />
   </head>
   <body>
     <header class="site-header" aria-label="No Drift navigation">
       <a class="brand" href="#top" aria-label="No Drift home">
         <span class="brand-name"><span class="wordmark-no">No</span> <span class="wordmark-drift">Drift</span></span>
       </a>
-      <nav class="nav-links" aria-label="Page sections">
+      <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-menu-toggle>
+        Menu
+      </button>
+      <nav id="site-navigation" class="nav-links" aria-label="Page sections">
         <a class="active" href="#top">Overview</a>
         <a href="#proof">Proof</a>
         <a href="#included">What You Get</a>
@@ -357,6 +360,6 @@
     </footer>
 
     <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-    <script src="script.js"></script>
+    <script src="script.js?v=mobile-menu-1"></script>
   </body>
 </html>

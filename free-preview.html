@@ -8,14 +8,17 @@
       name="description"
       content="A short free preview of No Drift, a Codex governance kit built to reduce drift, hallucinations, blind agreement, stale answers, and lost context."
     />
-    <link rel="stylesheet" href="styles.css?v=wordmark-1" />
+    <link rel="stylesheet" href="styles.css?v=mobile-menu-1" />
   </head>
   <body>
     <header class="site-header" aria-label="No Drift preview navigation">
       <a class="brand" href="index.html#top" aria-label="Back to No Drift home">
         <span class="brand-name"><span class="wordmark-no">No</span> <span class="wordmark-drift">Drift</span></span>
       </a>
-      <nav class="nav-links" aria-label="Preview sections">
+      <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-menu-toggle>
+        Menu
+      </button>
+      <nav id="site-navigation" class="nav-links" aria-label="Preview sections">
         <a href="index.html#proof">Proof</a>
         <a href="customize.html">Customize</a>
         <a href="audit-summary.html">Audit Summary</a>
@@ -92,5 +95,7 @@
       <span>Created and copyrighted by Don Gordon.</span>
       <span>Copyright (c) 2026 Don Gordon. All rights reserved.</span>
     </footer>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js?v=mobile-menu-1"></script>
   </body>
 </html>

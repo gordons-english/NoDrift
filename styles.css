@@ -114,6 +114,19 @@ button {
   text-underline-offset: 18px;
 }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border: 1px solid rgba(111, 215, 211, 0.58);
+  border-radius: var(--radius);
+  padding: 0 14px;
+  color: var(--teal);
+  background: rgba(111, 215, 211, 0.08);
+  font-weight: 800;
+}
+
 .header-action,
 .button {
   display: inline-flex;
@@ -1431,11 +1444,40 @@ h3,
 
 @media (max-width: 1040px) {
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 14px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
   }
 
   .nav-links {
     display: none;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(210, 232, 235, 0.14);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .site-header.is-menu-open .nav-links {
+    display: grid;
+  }
+
+  .nav-links a {
+    padding: 10px 8px;
+    border-radius: calc(var(--radius) - 2px);
+    text-align: center;
+    background: rgba(7, 16, 20, 0.46);
+  }
+
+  .nav-links a.active {
+    text-decoration: none;
+    background: rgba(111, 215, 211, 0.12);
   }
 
   .hero {
@@ -1491,12 +1533,17 @@ h3,
 @media (max-width: 700px) {
   .site-header {
     position: static;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 14px;
   }
 
   .header-action {
+    grid-column: 1 / -1;
     width: 100%;
+  }
+
+  .site-header.is-menu-open .nav-links {
+    grid-template-columns: 1fr;
   }
 
   .hero {

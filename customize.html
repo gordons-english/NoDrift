@@ -8,14 +8,17 @@
       name="description"
       content="A local customization preview for the No Drift user communication profile."
     />
-    <link rel="stylesheet" href="styles.css?v=wordmark-1" />
+    <link rel="stylesheet" href="styles.css?v=mobile-menu-1" />
   </head>
   <body>
     <header class="site-header" aria-label="No Drift customization navigation">
       <a class="brand" href="index.html#top" aria-label="Back to No Drift home">
         <span class="brand-name"><span class="wordmark-no">No</span> <span class="wordmark-drift">Drift</span></span>
       </a>
-      <nav class="nav-links" aria-label="Customization links">
+      <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-menu-toggle>
+        Menu
+      </button>
+      <nav id="site-navigation" class="nav-links" aria-label="Customization links">
         <a href="index.html#top">Overview</a>
         <a href="free-preview.html">Free Preview</a>
         <a href="audit-summary.html">Audit Summary</a>
@@ -231,6 +234,6 @@
     </footer>
 
     <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-    <script src="script.js"></script>
+    <script src="script.js?v=mobile-menu-1"></script>
   </body>
 </html>

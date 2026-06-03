@@ -192,10 +192,24 @@ button {
 .hero-copy h1 {
   max-width: 720px;
   margin: 0;
+  color: #dde6e3;
   font-size: clamp(3.45rem, 4.7vw, 4.25rem);
   line-height: 1.05;
   font-weight: 850;
   letter-spacing: 0;
+}
+
+.hero-title-main,
+.hero-title-brand {
+  display: block;
+}
+
+.hero-title-brand {
+  margin-top: 0.14em;
+  color: #86d8d4;
+  font-size: 0.82em;
+  font-weight: 780;
+  text-shadow: 0 0 18px rgba(111, 215, 211, 0.14);
 }
 
 .hero-subtitle {
@@ -222,7 +236,8 @@ button {
 
 .hero-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 258px));
+  grid-template-columns: minmax(0, 258px);
+  justify-content: center;
   gap: 16px;
   margin-top: 30px;
 }
@@ -235,7 +250,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  align-items: center;
+  align-items: stretch;
   max-width: 660px;
   margin-top: 30px;
   color: #dfe8e8;
@@ -244,16 +259,19 @@ button {
 
 .proof-item {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 8px;
-  align-items: baseline;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  align-items: center;
+  align-content: start;
+  justify-items: center;
+  text-align: center;
   min-height: 48px;
   padding: 0 22px;
   border-right: 1px solid rgba(210, 232, 235, 0.16);
 }
 
 .proof-item:first-child {
-  padding-left: 0;
+  padding-left: 22px;
 }
 
 .proof-item:nth-child(3) {
@@ -265,6 +283,11 @@ button {
   font-weight: 900;
   font-size: 1.45rem;
   line-height: 1;
+}
+
+.proof-item span {
+  display: block;
+  line-height: 1.24;
 }
 
 .proof-strip small {
@@ -744,7 +767,7 @@ button {
 .summary-band {
   display: grid;
   width: min(1180px, calc(100% - 40px));
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   margin: 0 auto;
   padding: clamp(26px, 4vw, 44px) 0 clamp(36px, 5vw, 58px);
   border-top: 1px solid rgba(111, 215, 211, 0.28);
@@ -754,7 +777,7 @@ button {
 
 .summary-band article {
   padding: 0 clamp(22px, 3vw, 36px);
-  border-right: 1px solid rgba(210, 232, 235, 0.14);
+  border-right: 0;
 }
 
 .summary-band article:last-child {
@@ -772,10 +795,6 @@ button {
 }
 
 .summary-band article:first-child svg {
-  stroke: var(--red);
-}
-
-.summary-band article:nth-child(3) svg {
   stroke: var(--gold);
 }
 
@@ -799,6 +818,10 @@ h3,
   font-size: 1.14rem;
 }
 
+.summary-band h2 {
+  font-size: clamp(1.45rem, 2vw, 1.9rem);
+}
+
 .card-link {
   display: inline-flex;
   margin-top: 12px;
@@ -813,6 +836,7 @@ h3,
 }
 
 .summary-band p,
+.core-section p,
 .included-grid p,
 .faq-grid p,
 .split-section p,
@@ -820,6 +844,51 @@ h3,
 .claim-boundary p {
   color: var(--muted);
   line-height: 1.62;
+}
+
+.core-section {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: clamp(48px, 5vw, 68px) 0 clamp(42px, 4vw, 56px);
+  scroll-margin-top: 100px;
+}
+
+.core-panel {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: clamp(20px, 2.6vw, 28px);
+  border: 1px solid rgba(210, 232, 235, 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.core-panel h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
+  line-height: 1.08;
+}
+
+.core-panel p {
+  margin: 0;
+}
+
+.evidence-preview {
+  padding: clamp(20px, 3vw, 34px) 0 clamp(52px, 5vw, 70px);
+  scroll-margin-top: 100px;
+}
+
+.evidence-preview .section-heading {
+  margin-bottom: 18px;
+}
+
+.evidence-preview .evidence-grid {
+  padding: 16px 0 0;
+}
+
+.evidence-preview .card-link {
+  margin-top: 18px;
 }
 
 .split-section {
@@ -872,7 +941,6 @@ h3,
   display: grid;
   gap: 12px;
   align-content: center;
-  min-height: 250px;
   padding: 28px;
   border: 1px solid rgba(210, 232, 235, 0.16);
   border-left: 3px solid rgba(105, 229, 224, 0.78);
@@ -885,6 +953,10 @@ h3,
 .customization-callout h3 {
   margin: 0;
   font-size: 1.18rem;
+}
+
+.customization-callout h2 {
+  margin: 0;
 }
 
 .customization-callout p {
@@ -1671,10 +1743,13 @@ h3,
   }
 
   .summary-band,
-  .included-grid,
   .faq-grid,
   .metric-ribbon {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .summary-band {
+    grid-template-columns: 1fr;
   }
 
   .summary-band article:nth-child(2) {
@@ -1682,11 +1757,16 @@ h3,
   }
 
   .summary-band article {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 0;
   }
 
   .summary-band article:nth-last-child(-n + 2) {
     border-bottom: 0;
+  }
+
+  .core-section,
+  .included-grid {
+    grid-template-columns: 1fr;
   }
 
   .offer-section {

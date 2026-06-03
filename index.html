@@ -35,8 +35,7 @@
       </button>
       <nav id="site-navigation" class="nav-links" aria-label="Page sections">
         <a class="active" href="#top">Overview</a>
-        <a href="#proof">Proof</a>
-        <a href="#included">What You Get</a>
+        <a href="audit-summary.html">Evidence</a>
         <a href="customize.html">Customize</a>
         <a href="best-practices.html">Best Practices</a>
         <a href="#faq">FAQ</a>
@@ -49,23 +48,25 @@
     <main id="top">
       <section class="hero section-shell">
         <div class="hero-copy">
-          <h1>Stop Losing AI Productivity To Unchecked Drift.</h1>
+          <h1>
+            <span class="hero-title-main">Stop Paying for AI Hallucinations.</span>
+            <span class="hero-title-brand">Use NoDrift.</span>
+          </h1>
           <p class="hero-subtitle">
-            NODRIFT is a control system for AI work. It gives Codex rules to follow, checks to run, and memory files for what matters.
+            AI hallucinations get expensive when they are accepted as facts, repeated in memory, or carried into decisions.
           </p>
           <p class="supporting-line">
-            Built to systematically reduce hallucinations, drift, blind agreement, stale answers, and lost context.
+            NoDrift gives Codex rules, memory files, and verification checks so unsupported claims are easier to catch before they become rework.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <button class="button button-primary" type="button" data-placeholder="No payment link exists yet.">
               Buy NODRIFT - Coming Soon
             </button>
-            <a class="button button-secondary" href="free-preview.html">View Free Preview</a>
           </div>
-          <div class="proof-strip" aria-label="Audited proof summary">
+          <div class="proof-strip" aria-label="Audited evidence summary">
             <div class="proof-item">
               <strong>0</strong>
-              <span>confirmed drift</span>
+              <span>confirmed<br />drift</span>
             </div>
             <div class="proof-item">
               <strong>0</strong>
@@ -119,7 +120,7 @@
                 <article class="kit-sheet kit-sheet-septenary">
                   <span>07</span>
                   <h2>Productivity Metrics</h2>
-                  <p>Proof records for governed output.</p>
+                  <p>Evidence records for governed output.</p>
                 </article>
               </div>
               <div class="kit-details">
@@ -129,6 +130,7 @@
                     <li>First, add the files to your Codex workspace.</li>
                     <li>Paste the included setup prompt into Codex.</li>
                     <li>Run the included verification prompt.</li>
+                    <li>Ask Codex to customize your working profile.</li>
                   </ul>
                 </article>
                 <article class="kit-flow">
@@ -137,6 +139,7 @@
                     <li>Confirms the rules and memory files are visible.</li>
                     <li>Reports missing files, placeholders, or conflicts.</li>
                     <li>Gives Codex the verified starting structure.</li>
+                    <li>Then Codex asks what project you want to begin.</li>
                   </ul>
                 </article>
               </div>
@@ -146,84 +149,85 @@
         </div>
       </section>
 
-      <section class="summary-band" aria-label="Page summary">
-        <article>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3 3 20h18L12 3Zm0 6v5m0 3h.01" />
-          </svg>
-          <h2>The Problem</h2>
-          <p>AI work gets expensive when the conversation goes off track, loses context, agrees too easily, or acts before approval is clear.</p>
-        </article>
-        <article>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3 20 7v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Zm-3 9 2 2 4-5" />
-          </svg>
-          <h2>What NODRIFT Does</h2>
-          <p>It sets rules for what Codex may trust, verify, record, and act on before serious projects become fragile.</p>
-        </article>
-        <article id="proof">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 19V5m0 14h16M8 16v-5m5 5V8m5 8v-9" />
-          </svg>
-          <h2>Proof</h2>
-          <p>Codex Analytics recorded 115 threads and 665 turns in the selected range, with 0 confirmed drift and 0 confirmed hallucinations in the audit.</p>
-          <a class="card-link" href="audit-summary.html">Full audit summary</a>
-        </article>
-        <article>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m12 3 8 4-8 4-8-4 8-4Zm8 8-8 4-8-4m16 4-8 4-8-4" />
-          </svg>
-          <h2>What You Get</h2>
-          <p>The V1 kit includes governance templates, project memory files, setup prompts, checklists, proof material, and a simple governed example.</p>
-          <a class="card-link" href="customize.html">Customize your setup</a>
-        </article>
-      </section>
-
-      <section class="section-shell split-section">
-        <div>
-          <h2>NODRIFT does not control the AI.</h2>
+      <section id="included" class="section-shell core-section" aria-label="NoDrift system explanation">
+        <article class="core-panel">
+          <h2>NoDrift Does Not Control AI.</h2>
           <p>
-            In human communication, we do not control the transmission. We control the reception: how we listen,
-            verify, decide, and respond.
+            In human communication, we do not control the transmission. We control the reception: what we accept,
+            verify, record, and act on.
           </p>
           <p>
-            NODRIFT does the same for AI work. It does not control what the LLM sends; it controls what the workspace
-            accepts, records, verifies, and acts on.
+            NODRIFT applies that same discipline to AI-assisted project work.
           </p>
-        </div>
-        <article class="customization-callout" aria-label="User customization">
-          <h3>User Customization</h3>
-          <p>Choose communication style, token-use level, progress updates, teaching mode, and uncertainty reporting without weakening governance.</p>
+          <ul class="plain-list">
+            <li>It does not change the LLM or guarantee every answer is true.</li>
+            <li>It checks important claims before they become project facts.</li>
+            <li>It keeps decisions, open questions, and source boundaries visible.</li>
+            <li>It pauses unclear actions until approval is clear.</li>
+          </ul>
+        </article>
+        <article class="core-panel customization-callout" aria-label="User customization">
+          <h2>NoDrift Customizes Codex.</h2>
+          <p>
+            NODRIFT lets the buyer set how Codex communicates, asks questions, reports progress, and uses detail
+            before serious project work begins.
+          </p>
+          <ul class="plain-list">
+            <li>Choose Fast Work, Standard Work, Guided Work, or Deep Support.</li>
+            <li>Adjust who suggests next steps, when questions are grouped, and when approval is required.</li>
+            <li>Set answer length, teaching mode, evidence labels, and token-use intensity.</li>
+            <li>Store more than one working profile and switch profiles when the project changes.</li>
+          </ul>
           <a class="card-link" href="customize.html">Open customization page</a>
         </article>
+        <article class="core-panel workspace-files-panel">
+          <h2>NoDrift Workspace Files.</h2>
+          <p>
+            The kit is a downloadable Codex workspace structure, not a blank worksheet set.
+          </p>
+          <ul class="plain-list">
+            <li>Operating rules.</li>
+            <li>Governance templates and approval matrix.</li>
+            <li>Source register and open decisions.</li>
+            <li>Context checkpoints and memory templates.</li>
+            <li>Verification checklist and evidence records.</li>
+            <li>Productivity metrics and incident logs.</li>
+            <li>Setup prompts, install checklist, and governed example project.</li>
+          </ul>
+        </article>
       </section>
 
-      <section id="included" class="included-section section-shell">
+      <section id="proof" class="evidence-preview section-shell" aria-label="NODRIFT evidence preview">
         <div class="section-heading">
-          <h2>What You Get In The NODRIFT V1 Kit.</h2>
+          <h2>Evidence Summary</h2>
           <p>
-            A downloadable workspace kit with governance templates, project memory files, audit records, setup prompts,
-            checklists, and a simple governed example.
+            A compact public summary from the governed Codex workspace. Full file, folder,
+            source-preparation, and build details stay on the audit summary page.
           </p>
         </div>
-        <div class="included-grid">
-          <article>
-            <h3>Governance Templates</h3>
-            <p>Root instructions, approval matrix, source fidelity, verification rules, model routing, and context continuity.</p>
-          </article>
-          <article>
-            <h3>Project Memory</h3>
-            <p>State, source register, open decisions, work queue, checkpoints, handoffs, risks, and implementation logs.</p>
-          </article>
-          <article>
-            <h3>Proof And Audit</h3>
-            <p>Productivity audit, incident logs, communication quality tracking, metrics reference, and case-study records.</p>
-          </article>
-          <article>
-            <h3>Setup Support</h3>
-            <p>Start guide, install map, first-session prompts, setup checklist, and a simple governed project example.</p>
-          </article>
+        <div class="metric-ribbon" aria-label="Headline audit results">
+          <div>
+            <strong>115</strong>
+            <span>Codex Analytics threads</span>
+          </div>
+          <div>
+            <strong>665</strong>
+            <span>Codex Analytics turns</span>
+          </div>
+          <div>
+            <strong>0</strong>
+            <span>confirmed drift</span>
+          </div>
+          <div>
+            <strong>0</strong>
+            <span>confirmed hallucinations</span>
+          </div>
+          <div>
+            <strong>0</strong>
+            <span>unauthorized actions</span>
+          </div>
         </div>
+        <a class="card-link" href="audit-summary.html">Open full audit summary</a>
       </section>
 
       <section class="offer-section section-shell">
@@ -251,7 +255,7 @@
           <div class="faq-grid">
             <article>
               <h4>What is NODRIFT?</h4>
-              <p>NODRIFT is a downloadable workspace control kit for Codex. It gives a project operating rules, source checks, memory files, approval boundaries, and proof records.</p>
+              <p>NODRIFT is a downloadable workspace control kit for Codex. It gives a project operating rules, source checks, memory files, approval boundaries, and evidence records.</p>
             </article>
             <article>
               <h4>Is this software or a separate app?</h4>
@@ -259,7 +263,7 @@
             </article>
             <article>
               <h4>Is this just a prompt pack?</h4>
-              <p>No. Prompts are included, but NODRIFT is a workspace governance system: root instructions, governance modules, approval gates, memory templates, checklists, and proof records.</p>
+              <p>No. Prompts are included, but NODRIFT is a workspace governance system: root instructions, governance modules, approval gates, memory templates, checklists, and evidence records.</p>
             </article>
             <article>
               <h4>Does it control the AI model?</h4>
@@ -319,14 +323,14 @@
         </div>
 
         <div class="faq-group">
-          <h3>Proof, Limits, Payment, And Delivery</h3>
+          <h3>Evidence, Limits, Payment, And Delivery</h3>
           <div class="faq-grid">
             <article>
               <h4>Does NODRIFT guarantee no hallucinations?</h4>
               <p>No. It gives Codex rules and habits that make unsupported claims easier to catch before they become project facts. It reduces risk; it does not promise perfection.</p>
             </article>
             <article>
-              <h4>What do the proof metrics mean?</h4>
+              <h4>What do the evidence metrics mean?</h4>
               <p>Metrics apply to defined work periods. They can track confirmed drift, confirmed hallucinations, unauthorized actions, project contamination, communication quality, and productive output.</p>
             </article>
             <article>

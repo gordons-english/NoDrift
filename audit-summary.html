@@ -33,19 +33,19 @@
       <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-menu-toggle>
         Menu
       </button>
-      <nav id="site-navigation" class="nav-links" aria-label="Audit sections">
+      <nav id="site-navigation" class="nav-links" aria-label="Evidence links">
         <a href="index.html#top">Overview</a>
+        <a class="active" href="audit-summary.html">Evidence</a>
         <a href="customize.html">Customize</a>
         <a href="best-practices.html">Best Practices</a>
-        <a href="free-preview.html">Free Preview</a>
         <a href="index.html#faq">FAQ</a>
       </nav>
-      <a class="header-action" href="index.html#proof">Back To Proof</a>
+      <a class="header-action" href="index.html#top">Back To Overview</a>
     </header>
 
     <main class="subpage-main">
       <section class="section-shell subpage-hero">
-        <p class="eyebrow">Local proof summary</p>
+        <p class="eyebrow">Local evidence summary</p>
         <h1>Full Audit Summary</h1>
         <p class="hero-subtitle">
           From May 27, 2026 to June 1, 2026, the governed Codex workspace produced high-output project,
@@ -123,13 +123,92 @@
         </article>
 
         <article class="detail-panel span-two">
+          <h2>What NODRIFT Checks</h2>
+          <p>
+            NODRIFT checks the points where AI-assisted work usually loses reliability. It is not continuous hidden
+            monitoring. It is a governed review pattern that Codex applies when the work reaches a decision point.
+          </p>
+          <ul class="plain-list">
+            <li>Drift away from the user's latest instruction, approved scope, or active project.</li>
+            <li>Hallucinated facts, unsupported claims, stale assumptions, or invented source details.</li>
+            <li>Unauthorized actions such as editing, publishing, committing, uploading, sharing, deleting, or using outside accounts without approval.</li>
+            <li>Project contamination from old chats, unrelated folders, private material, or another project's facts.</li>
+            <li>Source authority problems when drafts, screenshots, old capsules, current files, and user instructions conflict.</li>
+            <li>Open decisions that are still being discussed and must not be treated as approved facts.</li>
+            <li>Memory continuity risk before long pauses, new chats, continuation capsules, handoffs, or compressed chat history.</li>
+            <li>Implementation changes that need a record of what changed, why it changed, and how it was checked.</li>
+            <li>External action boundaries before anything leaves the local workspace or affects a connected account.</li>
+            <li>Verification before public claims, file-completion claims, or audit claims are treated as ready.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>How Governance Is Accessed</h2>
+          <p>
+            NODRIFT does not run as hidden surveillance software. It works through visible governance files,
+            addendums, memory records, source registers, approval rules, and checkpoints that a Codex agent is told
+            to read before acting.
+          </p>
+          <p>
+            In a governed workspace, the project instructions point the agent to the active addendums first. The agent
+            reads the Codex-specific addendum for file access, tools, permissions, verification, publishing, and
+            stop/go behavior. It then reads the universal governance for drift control, source fidelity, decision
+            labels, no unauthorized rewriting, and no unauthorized creation.
+          </p>
+          <p>
+            The rules are actively applied at decision points: when a task begins, before files are inspected, before a
+            factual claim is made, before edits are made, before old context is reused, before external action, and
+            after work is finished for verification.
+          </p>
+          <ul class="plain-list">
+            <li>A new agent should read the workspace instructions, then the governing addendums, then the project memory files.</li>
+            <li>The agent should identify the current task, controlling sources, allowed files, approval status, and verification needed.</li>
+            <li>If the task would edit, publish, commit, upload, send, delete, or use an outside account, the agent must stop for explicit approval.</li>
+            <li>If a claim cannot be tied to a file, screenshot, browser state, tool output, or Don's instruction, it must be marked uncertain.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>How This Differs From Agent Memory</h2>
+          <p>
+            Codex, Claude Code, and Gemini-style coding agents can use project instructions or memory files. That gives
+            them context. NODRIFT adds an operating layer around that context: source authority, decision status,
+            permission gates, risk tracking, evidence records, handoff rules, and verification before claims.
+          </p>
+          <p>
+            In practice, the agent still uses its native instruction system. Codex can use project instructions such as
+            AGENTS.md. Claude Code and Gemini-style tools have their own project-context mechanisms. NODRIFT is designed
+            to sit above those mechanisms as the project control system.
+          </p>
+          <p>
+            The result is not simply "more memory." It is governed memory: what is true, what is approved, what is
+            uncertain, what is risky, what must be checked, what must wait, and what the next agent should read before
+            acting.
+          </p>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>What Stays Inside The Kit</h2>
+          <p>
+            This public page explains the architecture, not the full machinery. It shows the categories NODRIFT checks
+            and the way governance is applied, but it does not publish the complete governance text, complete memory
+            templates, exact operating language, private source examples, or full internal audit procedure.
+          </p>
+          <p>
+            The paid kit contains the installable workspace files: governance templates, project memory templates,
+            setup prompts, checklists, evidence records, incident logs, communication profile structure, and
+            continuation/handoff templates.
+          </p>
+        </article>
+
+        <article class="detail-panel span-two">
           <h2>Claim Boundary</h2>
           <p>
             These are audited local records, not a promise that AI can never make mistakes. Public claims should use
             the phrase "no confirmed drift" and "no confirmed hallucinations" for the audited period.
           </p>
           <p>
-            The strongest proof is output density: substantial usable work was created, mapped, classified, reviewed,
+            The strongest evidence is output density: substantial usable work was created, mapped, classified, reviewed,
             and prepared without the work being consumed by drift correction, hallucination cleanup, repeated
             re-explanation, or unauthorized action.
           </p>

@@ -38,10 +38,11 @@ const currentProfile = document.querySelector("[data-current-profile]");
 const profileNote = document.querySelector("[data-profile-note]");
 const workflowSummary = document.querySelector("[data-workflow-summary]");
 const communicationSummary = document.querySelector("[data-communication-summary]");
-const tokenScore = document.querySelector("[data-token-score]");
+const tokenScore = document.querySelector("[data-token-estimate]");
 const tokenLabel = document.querySelector("[data-token-label]");
 const tokenMeter = document.querySelector("[data-token-meter]");
 const tokenContributors = document.querySelector("[data-token-contributors]");
+const rowSummaryCards = document.querySelectorAll("[data-row-summary]");
 
 const profilePresets = {
   fast: {
@@ -147,12 +148,21 @@ function setCustomProfile() {
 function summarize(sectionName) {
   return Array.from(document.querySelectorAll(`[data-summary-section="${sectionName}"]`)).map((group) => {
     const selected = group.querySelector(".choice-button.is-selected");
+    const label = group.getAttribute("data-choice-group");
     return {
-      label: group.getAttribute("data-choice-group"),
+      key: summaryKey(label),
+      label,
       value: selected ? selected.getAttribute("data-choice") : "Not selected",
-      score: selected ? Number(selected.getAttribute("data-token-score")) || null : null,
+      score: selected ? Number.parseFloat(selected.getAttribute("data-token-score")) || null : null,
     };
   });
+}
+
+function summaryKey(value) {
+  return String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 function renderSummary(target, rows) {
@@ -163,44 +173,53 @@ function renderSummary(target, rows) {
 }
 
 function tokenLabelFor(average) {
-  if (average <= 1.35) return "Lean";
-  if (average <= 2.15) return "Efficient-balanced";
-  if (average <= 3.15) return "Guided";
+  if (average <= 1.75) return "Lean";
+  if (average <= 2.5) return "Efficient-balanced";
+  if (average <= 3.25) return "Guided";
   return "High-support";
 }
 
 function tokenLevelFor(score) {
-  if (score <= 1) return "Low";
-  if (score <= 2) return "Moderate";
-  if (score <= 3) return "High";
-  return "Maximum";
+  if (score <= 1.75) return "Lean";
+  if (score <= 2.5) return "Moderate";
+  if (score <= 3.25) return "Strong";
+  return "Intensive";
 }
 
-function updateTokenEstimate(communicationRows) {
-  const scoredRows = communicationRows.filter((row) => row.score);
+function formatScore(score) {
+  return Number.isFinite(score) ? score.toFixed(1) : "0.0";
+}
+
+function updateTokenEstimate(rows) {
+  const scoredRows = rows.filter((row) => row.score);
   if (!scoredRows.length) return;
 
   const average = scoredRows.reduce((total, row) => total + row.score, 0) / scoredRows.length;
   const rounded = Math.round(average * 10) / 10;
   const percent = (average / 4) * 100;
 
-  if (tokenScore) tokenScore.textContent = rounded.toFixed(1);
+  if (tokenScore) tokenScore.textContent = formatScore(rounded);
   if (tokenLabel) tokenLabel.textContent = tokenLabelFor(average);
   if (tokenMeter) tokenMeter.style.width = `${Math.max(0, Math.min(100, percent))}%`;
+}
 
-  if (tokenContributors) {
-    tokenContributors.innerHTML = scoredRows
-      .map(
-        (row) => `
-          <div class="contributor-row">
-            <span>${escapeHTML(row.label)}</span>
-            <em>${tokenLevelFor(row.score)}</em>
-            <div class="contributor-meter" aria-hidden="true"><i style="width: ${(row.score / 4) * 100}%"></i></div>
-          </div>
-        `,
-      )
-      .join("");
-  }
+function updateRowSummaries(rows) {
+  rowSummaryCards.forEach((card) => {
+    const row = rows.find((item) => item.key === card.getAttribute("data-row-summary"));
+    if (!row) return;
+
+    const score = row.score || 0;
+    const percent = (score / 4) * 100;
+    const value = card.querySelector("[data-row-value]");
+    const scoreDisplay = card.querySelector("[data-row-score]");
+    const label = card.querySelector("[data-row-label]");
+    const meter = card.querySelector("[data-row-meter]");
+
+    if (value) value.textContent = row.value;
+    if (scoreDisplay) scoreDisplay.textContent = formatScore(score);
+    if (label) label.textContent = tokenLevelFor(score);
+    if (meter) meter.style.width = `${Math.max(0, Math.min(100, percent))}%`;
+  });
 }
 
 function updateProfileSummary() {
@@ -218,9 +237,11 @@ function updateProfileSummary() {
 
   const workflowRows = summarize("workflow");
   const communicationRows = summarize("communication");
+  const scoredRows = [...workflowRows, ...communicationRows];
   renderSummary(workflowSummary, workflowRows);
   renderSummary(communicationSummary, communicationRows);
-  updateTokenEstimate(communicationRows);
+  updateRowSummaries(scoredRows);
+  updateTokenEstimate(scoredRows);
 }
 
 document.querySelectorAll("[data-profile]").forEach((button) => {

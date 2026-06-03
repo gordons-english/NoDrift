@@ -23,7 +23,7 @@
       name="twitter:description"
       content="A local customization preview for the NODRIFT user communication profile."
     />
-    <link rel="stylesheet" href="styles.css?v=section-nav-1" />
+    <link rel="stylesheet" href="styles.css?v=customize-layout-3" />
   </head>
   <body>
     <header class="site-header" aria-label="NODRIFT customization navigation">
@@ -45,7 +45,7 @@
     <main class="subpage-main">
       <section class="section-shell subpage-hero">
         <p class="eyebrow">User communication profile</p>
-        <h1>Personalize how Codex works with you.</h1>
+        <h1>Customize how Codex works with you.</h1>
         <p class="hero-subtitle">
           Configure how Codex communicates, leads work, asks questions, explains decisions, and reports evidence
           without changing what Codex must verify.
@@ -57,14 +57,14 @@
       </section>
 
       <section class="section-shell customization-shell" aria-label="Customization demo">
-        <div class="customization-form" data-profile-demo>
-          <section class="settings-group" aria-labelledby="workflow-settings-heading">
-            <div class="group-heading">
-              <span class="group-label">Workflow settings</span>
-              <h2 id="workflow-settings-heading">How the work moves</h2>
-              <p>These choices shape who leads, when Codex asks, and how approval stays visible.</p>
-            </div>
+        <div class="customization-board" data-profile-demo>
+          <div class="group-heading customization-heading">
+            <span class="group-label">Workflow settings</span>
+            <h2 id="workflow-settings-heading">How Codex works with you</h2>
+            <p>These choices shape who leads, when Codex asks, and how approval stays visible.</p>
+          </div>
 
+          <div class="customization-row profile-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">1</span>
@@ -80,6 +80,28 @@
               </div>
             </article>
 
+            <aside class="row-summary-card setup-summary-card" aria-label="Current setup">
+              <h2>Current Setup</h2>
+              <div class="setup-summary-block">
+                <h3>Working Profile</h3>
+                <strong data-current-profile>Standard Work</strong>
+                <p data-profile-note>Preset profile. Manual changes will mark this as Custom.</p>
+              </div>
+              <div class="setup-summary-block">
+                <h3>Estimated Total Token Use</h3>
+                <div class="score-display">
+                  <strong data-token-estimate>2.0</strong>
+                  <span>out of 4</span>
+                </div>
+                <p data-token-label>Efficient-balanced</p>
+                <div class="token-meter" aria-hidden="true">
+                  <span data-token-meter></span>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="customization-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">2</span>
@@ -88,13 +110,28 @@
                 <p class="setting-detail">Approved Task Queue means Codex works through a list you already approved and stops at new boundaries, risks, unclear decisions, or external actions.</p>
               </div>
               <div class="choice-grid" data-choice-group="Work Leadership" data-summary-section="workflow">
-                <button type="button" class="choice-button" data-choice="User Leads">User Leads</button>
-                <button type="button" class="choice-button" data-choice="Recommend Next Step">Recommend Next Step</button>
-                <button type="button" class="choice-button is-selected" data-choice="Codex Leads With Approval">Codex Leads With Approval</button>
-                <button type="button" class="choice-button" data-choice="Approved Task Queue">Approved Task Queue</button>
+                <button type="button" class="choice-button" data-token-score="1.6" data-choice="User Leads">User Leads</button>
+                <button type="button" class="choice-button" data-token-score="2.2" data-choice="Recommend Next Step">Recommend Next Step</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2.8" data-choice="Codex Leads With Approval">Codex Leads With Approval</button>
+                <button type="button" class="choice-button" data-token-score="3.3" data-choice="Approved Task Queue">Approved Task Queue</button>
               </div>
             </article>
 
+            <aside class="row-summary-card" data-row-summary="work-leadership" aria-label="Work Leadership summary">
+              <h3>Work Leadership</h3>
+              <strong data-row-value>Codex Leads With Approval</strong>
+              <div class="row-score-line">
+                <span data-row-score>2.8</span>
+                <em data-row-label>High</em>
+              </div>
+              <div class="token-meter row-meter" aria-hidden="true">
+                <span data-row-meter></span>
+              </div>
+              <p>Token intensity for this setting.</p>
+            </aside>
+          </div>
+
+          <div class="customization-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">3</span>
@@ -103,21 +140,34 @@
                 <p class="setting-detail">Continue If Clear means Codex keeps working only when the next step is already approved, low-risk, and obvious from the task.</p>
               </div>
               <div class="choice-grid" data-choice-group="Question Handling" data-summary-section="workflow">
-                <button type="button" class="choice-button" data-choice="Continue If Clear">Continue If Clear</button>
-                <button type="button" class="choice-button is-selected" data-choice="Group Questions">Group Questions</button>
-                <button type="button" class="choice-button" data-choice="One Question At A Time">One Question At A Time</button>
-                <button type="button" class="choice-button" data-choice="Ask Before Major Steps">Ask Before Major Steps</button>
+                <button type="button" class="choice-button" data-token-score="1.6" data-choice="Continue If Clear">Continue If Clear</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2.1" data-choice="Group Questions">Group Questions</button>
+                <button type="button" class="choice-button" data-token-score="2.8" data-choice="One Question At A Time">One Question At A Time</button>
+                <button type="button" class="choice-button" data-token-score="3.3" data-choice="Ask Before Major Steps">Ask Before Major Steps</button>
               </div>
             </article>
-          </section>
 
-          <section class="settings-group" aria-labelledby="communication-settings-heading">
-            <div class="group-heading">
-              <span class="group-label">Communication settings</span>
-              <h2 id="communication-settings-heading">What affects estimated token use</h2>
-              <p>The estimate is based on these communication choices. It is not a guarantee, because real token use still depends on the task and source material.</p>
-            </div>
+            <aside class="row-summary-card" data-row-summary="question-handling" aria-label="Question Handling summary">
+              <h3>Question Handling</h3>
+              <strong data-row-value>Group Questions</strong>
+              <div class="row-score-line">
+                <span data-row-score>2.1</span>
+                <em data-row-label>Moderate</em>
+              </div>
+              <div class="token-meter row-meter" aria-hidden="true">
+                <span data-row-meter></span>
+              </div>
+              <p>Token intensity for this setting.</p>
+            </aside>
+          </div>
 
+          <div class="group-heading customization-heading">
+            <span class="group-label">Communication settings</span>
+            <h2 id="communication-settings-heading">What affects estimated token use</h2>
+            <p>The estimate is based on these choices. It is not a guarantee, because real token use still depends on the task and source material.</p>
+          </div>
+
+          <div class="customization-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">4</span>
@@ -126,13 +176,28 @@
                 <p class="setting-detail">Moving right adds more context, reasoning, examples, tradeoffs, risks, and next-step explanation.</p>
               </div>
               <div class="choice-grid" data-choice-group="Communication Detail" data-summary-section="communication">
-                <button type="button" class="choice-button" data-token-score="1" data-choice="Direct Answer">Direct Answer</button>
-                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Short Context">Short Context</button>
-                <button type="button" class="choice-button" data-token-score="3" data-choice="Fuller Context">Fuller Context</button>
-                <button type="button" class="choice-button" data-token-score="4" data-choice="Complete Explanation">Complete Explanation</button>
+                <button type="button" class="choice-button" data-token-score="1.4" data-choice="Direct Answer">Direct Answer</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2.0" data-choice="Short Context">Short Context</button>
+                <button type="button" class="choice-button" data-token-score="3.0" data-choice="Fuller Context">Fuller Context</button>
+                <button type="button" class="choice-button" data-token-score="3.8" data-choice="Complete Explanation">Complete Explanation</button>
               </div>
             </article>
 
+            <aside class="row-summary-card" data-row-summary="communication-detail" aria-label="Communication Detail summary">
+              <h3>Communication Detail</h3>
+              <strong data-row-value>Short Context</strong>
+              <div class="row-score-line">
+                <span data-row-score>2.0</span>
+                <em data-row-label>Moderate</em>
+              </div>
+              <div class="token-meter row-meter" aria-hidden="true">
+                <span data-row-meter></span>
+              </div>
+              <p>Token intensity for this setting.</p>
+            </aside>
+          </div>
+
+          <div class="customization-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">5</span>
@@ -141,13 +206,28 @@
                 <p class="setting-detail">Moving right uses more precise terminology and assumes more comfort with technical language.</p>
               </div>
               <div class="choice-grid" data-choice-group="Language Level" data-summary-section="communication">
-                <button type="button" class="choice-button" data-token-score="1" data-choice="Plain Language">Plain Language</button>
-                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Light Technical">Light Technical</button>
-                <button type="button" class="choice-button" data-token-score="3" data-choice="Technical When Useful">Technical When Useful</button>
-                <button type="button" class="choice-button" data-token-score="4" data-choice="Full Technical">Full Technical</button>
+                <button type="button" class="choice-button" data-token-score="1.6" data-choice="Plain Language">Plain Language</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2.1" data-choice="Light Technical">Light Technical</button>
+                <button type="button" class="choice-button" data-token-score="2.8" data-choice="Technical When Useful">Technical When Useful</button>
+                <button type="button" class="choice-button" data-token-score="3.4" data-choice="Full Technical">Full Technical</button>
               </div>
             </article>
 
+            <aside class="row-summary-card" data-row-summary="language-level" aria-label="Language Level summary">
+              <h3>Language Level</h3>
+              <strong data-row-value>Light Technical</strong>
+              <div class="row-score-line">
+                <span data-row-score>2.1</span>
+                <em data-row-label>Moderate</em>
+              </div>
+              <div class="token-meter row-meter" aria-hidden="true">
+                <span data-row-meter></span>
+              </div>
+              <p>Token intensity for this setting.</p>
+            </aside>
+          </div>
+
+          <div class="customization-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">6</span>
@@ -156,13 +236,28 @@
                 <p class="setting-detail">Moving right shows more of what Codex checked, changed, found, verified, and still needs from you.</p>
               </div>
               <div class="choice-grid" data-choice-group="Progress Updates" data-summary-section="communication">
-                <button type="button" class="choice-button" data-token-score="1" data-choice="Final Result Only">Final Result Only</button>
-                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Milestone Updates">Milestone Updates</button>
-                <button type="button" class="choice-button" data-token-score="3" data-choice="Regular Updates">Regular Updates</button>
-                <button type="button" class="choice-button" data-token-score="4" data-choice="Detailed Work Log">Detailed Work Log</button>
+                <button type="button" class="choice-button" data-token-score="1.5" data-choice="Final Result Only">Final Result Only</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2.1" data-choice="Milestone Updates">Milestone Updates</button>
+                <button type="button" class="choice-button" data-token-score="2.9" data-choice="Regular Updates">Regular Updates</button>
+                <button type="button" class="choice-button" data-token-score="3.7" data-choice="Detailed Work Log">Detailed Work Log</button>
               </div>
             </article>
 
+            <aside class="row-summary-card" data-row-summary="progress-updates" aria-label="Progress Updates summary">
+              <h3>Progress Updates</h3>
+              <strong data-row-value>Milestone Updates</strong>
+              <div class="row-score-line">
+                <span data-row-score>2.1</span>
+                <em data-row-label>Moderate</em>
+              </div>
+              <div class="token-meter row-meter" aria-hidden="true">
+                <span data-row-meter></span>
+              </div>
+              <p>Token intensity for this setting.</p>
+            </aside>
+          </div>
+
+          <div class="customization-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">7</span>
@@ -171,13 +266,28 @@
                 <p class="setting-detail">Moving right adds more explanation, instruction, and advanced context while Codex does the work.</p>
               </div>
               <div class="choice-grid" data-choice-group="Explanation Level" data-summary-section="communication">
-                <button type="button" class="choice-button" data-token-score="1" data-choice="Just Do The Work">Just Do The Work</button>
-                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Brief Notes">Brief Notes</button>
-                <button type="button" class="choice-button" data-token-score="3" data-choice="Step By Step">Step By Step</button>
-                <button type="button" class="choice-button" data-token-score="4" data-choice="Advanced Context">Advanced Context</button>
+                <button type="button" class="choice-button" data-token-score="1.4" data-choice="Just Do The Work">Just Do The Work</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2.0" data-choice="Brief Notes">Brief Notes</button>
+                <button type="button" class="choice-button" data-token-score="3.0" data-choice="Step By Step">Step By Step</button>
+                <button type="button" class="choice-button" data-token-score="3.8" data-choice="Advanced Context">Advanced Context</button>
               </div>
             </article>
 
+            <aside class="row-summary-card" data-row-summary="explanation-level" aria-label="Explanation Level summary">
+              <h3>Explanation Level</h3>
+              <strong data-row-value>Brief Notes</strong>
+              <div class="row-score-line">
+                <span data-row-score>2.0</span>
+                <em data-row-label>Moderate</em>
+              </div>
+              <div class="token-meter row-meter" aria-hidden="true">
+                <span data-row-meter></span>
+              </div>
+              <p>Token intensity for this setting.</p>
+            </aside>
+          </div>
+
+          <div class="customization-row">
             <article class="choice-panel">
               <div>
                 <span class="choice-kicker">8</span>
@@ -186,59 +296,37 @@
                 <p class="setting-detail">Moving right gives more visible evidence labels and more explanation of why the status matters.</p>
               </div>
               <div class="choice-grid" data-choice-group="Evidence Status" data-summary-section="communication">
-                <button type="button" class="choice-button" data-token-score="1" data-choice="Critical Status Only">Critical Status Only</button>
-                <button type="button" class="choice-button is-selected" data-token-score="2" data-choice="Basic Status Labels">Basic Status Labels</button>
-                <button type="button" class="choice-button" data-token-score="3" data-choice="Detailed Source Labels">Detailed Source Labels</button>
-                <button type="button" class="choice-button" data-token-score="4" data-choice="Full Evidence Status">Full Evidence Status</button>
+                <button type="button" class="choice-button" data-token-score="1.6" data-choice="Critical Status Only">Critical Status Only</button>
+                <button type="button" class="choice-button is-selected" data-token-score="2.2" data-choice="Basic Status Labels">Basic Status Labels</button>
+                <button type="button" class="choice-button" data-token-score="3.1" data-choice="Detailed Source Labels">Detailed Source Labels</button>
+                <button type="button" class="choice-button" data-token-score="3.9" data-choice="Full Evidence Status">Full Evidence Status</button>
               </div>
             </article>
-          </section>
+
+            <aside class="row-summary-card" data-row-summary="evidence-status" aria-label="Evidence Status summary">
+              <h3>Evidence Status</h3>
+              <strong data-row-value>Basic Status Labels</strong>
+              <div class="row-score-line">
+                <span data-row-score>2.2</span>
+                <em data-row-label>Moderate</em>
+              </div>
+              <div class="token-meter row-meter" aria-hidden="true">
+                <span data-row-meter></span>
+              </div>
+              <p>Token intensity for this setting.</p>
+            </aside>
+          </div>
+
+          <div class="customization-actions">
+            <div class="locked-rules">
+              <h3>Always Protected Rules</h3>
+              <p>Customization does not alter, reduce, or compromise verification, source fidelity, privacy protection, approval gates, or external-action rules.</p>
+            </div>
+            <button class="button button-primary" type="button" data-placeholder="This local demo does not save settings yet. The full kit uses the editable User Communication Profile template.">
+              Save As Profile - Demo Only
+            </button>
+          </div>
         </div>
-
-        <aside class="profile-summary" aria-label="Current customization summary">
-          <h2>Current Setup</h2>
-
-          <div class="summary-card profile-card">
-            <h3>Working Profile</h3>
-            <strong data-current-profile>Standard Work</strong>
-            <p data-profile-note>Preset profile. Manual changes will mark this as Custom.</p>
-          </div>
-
-          <div class="summary-card estimate-card">
-            <h3>Estimated Token Use</h3>
-            <div class="score-display">
-              <strong data-token-score>2.0</strong>
-              <span>out of 4</span>
-            </div>
-            <p data-token-label>Efficient-balanced</p>
-            <div class="token-meter" aria-hidden="true">
-              <span data-token-meter></span>
-            </div>
-          </div>
-
-          <div class="summary-card">
-            <h3>Workflow Settings</h3>
-            <dl data-workflow-summary></dl>
-          </div>
-
-          <div class="summary-card">
-            <h3>Communication Settings</h3>
-            <dl data-communication-summary></dl>
-          </div>
-
-          <div class="summary-card token-contributors">
-            <h3>Token Contributors</h3>
-            <div data-token-contributors></div>
-          </div>
-
-          <div class="locked-rules">
-            <h3>Always Protected Rules</h3>
-            <p>Customization does not alter, reduce, or compromise verification, source fidelity, privacy protection, approval gates, or external-action rules.</p>
-          </div>
-          <button class="button button-primary" type="button" data-placeholder="This local demo does not save settings yet. The full kit uses the editable User Communication Profile template.">
-            Save As Profile - Demo Only
-          </button>
-        </aside>
       </section>
     </main>
 
@@ -249,6 +337,6 @@
     </footer>
 
     <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-    <script src="script.js?v=mobile-menu-1"></script>
+    <script src="script.js?v=customize-row-sync-1"></script>
   </body>
 </html>

@@ -23,7 +23,7 @@
       name="twitter:description"
       content="A local customization preview for the NODRIFT user communication profile."
     />
-    <link rel="stylesheet" href="styles.css?v=customize-layout-3" />
+    <link rel="stylesheet" href="styles.css?v=customize-layout-4" />
   </head>
   <body>
     <header class="site-header" aria-label="NODRIFT customization navigation">
@@ -35,6 +35,7 @@
       </button>
       <nav id="site-navigation" class="nav-links" aria-label="Customization links">
         <a href="index.html#top">Overview</a>
+        <a href="best-practices.html">Best Practices</a>
         <a href="free-preview.html">Free Preview</a>
         <a href="audit-summary.html">Audit Summary</a>
         <a href="index.html#faq">FAQ</a>
@@ -43,17 +44,37 @@
     </header>
 
     <main class="subpage-main">
-      <section class="section-shell subpage-hero">
-        <p class="eyebrow">User communication profile</p>
-        <h1>Customize how Codex works with you.</h1>
-        <p class="hero-subtitle">
-          Configure how Codex communicates, leads work, asks questions, explains decisions, and reports evidence
-          without changing what Codex must verify.
-        </p>
-        <p class="supporting-line">
-          Token savings should come only from communication-style choices, never from reducing verification, source
-          fidelity, privacy protection, approval gates, or external-action safeguards.
-        </p>
+      <section class="section-shell subpage-hero customize-hero">
+        <div class="customize-hero-copy">
+          <p class="eyebrow">User communication profile</p>
+          <h1>Customize how Codex works with you.</h1>
+          <p class="hero-subtitle">
+            Configure how Codex communicates, leads work, asks questions, explains decisions, and reports evidence
+            without changing what Codex must verify.
+          </p>
+          <p class="supporting-line">
+            Token savings should come only from communication-style choices, never from reducing verification, source
+            fidelity, privacy protection, approval gates, or external-action safeguards.
+          </p>
+        </div>
+
+        <aside class="customize-instructions" aria-label="How customization works in Codex">
+          <span class="group-label">How this works in Codex</span>
+          <h2>Use the same profiles after installation.</h2>
+          <ol>
+            <li>Add the NODRIFT files to your Codex project.</li>
+            <li>Run the setup prompt so Codex reads the rules, memory files, and approval boundaries.</li>
+            <li>Say <strong>Customize NODRIFT</strong>.</li>
+            <li>Codex offers these same profile choices and can save named profiles for different kinds of work.</li>
+          </ol>
+          <p>
+            Only one profile is active at a time. Codex should ask before saving, changing, renaming, or deleting a
+            profile.
+          </p>
+          <p class="instruction-note">
+            Customization changes communication style and workflow support. It does not weaken NODRIFT governance.
+          </p>
+        </aside>
       </section>
 
       <section class="section-shell customization-shell" aria-label="Customization demo">
@@ -61,7 +82,8 @@
           <div class="group-heading customization-heading">
             <span class="group-label">Workflow settings</span>
             <h2 id="workflow-settings-heading">How Codex works with you</h2>
-            <p>These choices shape who leads, when Codex asks, and how approval stays visible.</p>
+            <p>These settings control how Codex moves through a project: who suggests the next task, how often Codex stops to ask questions, and when Codex needs your permission before changing files, publishing, deleting, or taking outside action.</p>
+            <p class="token-impact token-impact-light">Token impact: light. These settings mostly control workflow and approval behavior.</p>
           </div>
 
           <div class="customization-row profile-row">
@@ -69,7 +91,7 @@
               <div>
                 <span class="choice-kicker">1</span>
                 <h2>Working Profile</h2>
-                <p>Choose a preset starting point. This moves the settings below.</p>
+                <p>Choose a preset starting point. This moves the settings below as a group, from lower token use to higher-detail support.</p>
                 <p class="setting-detail">If you change any setting manually, the current profile becomes Custom.</p>
               </div>
               <div class="choice-grid" data-choice-group="Working Profile" data-summary-section="profile">
@@ -165,6 +187,7 @@
             <span class="group-label">Communication settings</span>
             <h2 id="communication-settings-heading">What affects estimated token use</h2>
             <p>The estimate is based on these choices. It is not a guarantee, because real token use still depends on the task and source material.</p>
+            <p class="token-impact token-impact-strong">Token impact: major. These settings are the main controls for response length, detail, updates, and explanation.</p>
           </div>
 
           <div class="customization-row">

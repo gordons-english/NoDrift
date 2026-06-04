@@ -34,6 +34,38 @@ document.querySelectorAll("[data-menu-toggle]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-evidence-carousel]").forEach((carousel) => {
+  const section = carousel.closest(".evidence-timeline-section");
+  const previous = section?.querySelector("[data-carousel-prev]");
+  const next = section?.querySelector("[data-carousel-next]");
+  const cards = carousel.querySelectorAll("[data-evidence-card]");
+
+  function updateCarouselControls() {
+    if (cards.length <= 1) {
+      if (previous) previous.disabled = true;
+      if (next) next.disabled = true;
+      return;
+    }
+
+    const maximum = Math.max(0, carousel.scrollWidth - carousel.clientWidth);
+    if (previous) previous.disabled = carousel.scrollLeft <= 2;
+    if (next) next.disabled = carousel.scrollLeft >= maximum - 2;
+  }
+
+  function moveCarousel(direction) {
+    carousel.scrollBy({
+      left: direction * Math.max(280, carousel.clientWidth * 0.86),
+      behavior: "smooth",
+    });
+  }
+
+  previous?.addEventListener("click", () => moveCarousel(-1));
+  next?.addEventListener("click", () => moveCarousel(1));
+  carousel.addEventListener("scroll", updateCarouselControls, { passive: true });
+  window.addEventListener("resize", updateCarouselControls);
+  updateCarouselControls();
+});
+
 const currentProfile = document.querySelector("[data-current-profile]");
 const profileNote = document.querySelector("[data-profile-note]");
 const workflowSummary = document.querySelector("[data-workflow-summary]");

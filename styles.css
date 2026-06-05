@@ -62,7 +62,6 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   color: var(--text);
   text-decoration: none;
   min-width: 0;
@@ -70,44 +69,13 @@ button {
   position: relative;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  color: var(--title);
-  border: 1px solid rgba(111, 215, 211, 0.72);
-  border-radius: 8px;
-  background: rgba(111, 215, 211, 0.045);
-  box-shadow: inset 0 0 18px rgba(111, 215, 211, 0.08);
-  font-size: 0.95rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.brand-copy {
-  display: grid;
-  gap: 3px;
-  min-width: 0;
-}
-
 .brand-name {
   display: block;
-  font-size: 1.66rem;
+  font-size: 1.72rem;
   line-height: 1;
   font-weight: 850;
   letter-spacing: 0;
   text-shadow: 0 0 18px rgba(111, 215, 211, 0.16);
-  white-space: nowrap;
-}
-
-.brand-subline {
-  color: var(--teal);
-  font-size: 0.58rem;
-  font-weight: 750;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 

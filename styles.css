@@ -1080,6 +1080,10 @@ h3,
   margin: 0;
 }
 
+.core-section .customization-callout {
+  align-content: start;
+}
+
 .evidence-preview {
   padding: clamp(20px, 3vw, 34px) 0 clamp(52px, 5vw, 70px);
   scroll-margin-top: 100px;

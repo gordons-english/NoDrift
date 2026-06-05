@@ -657,7 +657,7 @@ button {
 
 .kit-stack {
   position: relative;
-  min-height: 600px;
+  min-height: 650px;
   margin-top: 14px;
   margin-right: 12px;
 }
@@ -714,7 +714,7 @@ button {
 
 .kit-sheet-secondary {
   z-index: 9;
-  top: 56px;
+  top: 62px;
   left: 16px;
   right: 2px;
   min-height: 86px;
@@ -724,7 +724,7 @@ button {
 
 .kit-sheet-tertiary {
   z-index: 8;
-  top: 112px;
+  top: 124px;
   left: 5px;
   right: 22px;
   min-height: 86px;
@@ -734,7 +734,7 @@ button {
 
 .kit-sheet-quaternary {
   z-index: 7;
-  top: 168px;
+  top: 186px;
   left: 18px;
   right: 0;
   min-height: 86px;
@@ -744,7 +744,7 @@ button {
 
 .kit-sheet-quinary {
   z-index: 6;
-  top: 224px;
+  top: 248px;
   left: 3px;
   right: 20px;
   min-height: 86px;
@@ -754,7 +754,7 @@ button {
 
 .kit-sheet-senary {
   z-index: 5;
-  top: 280px;
+  top: 310px;
   left: 16px;
   right: 4px;
   min-height: 86px;
@@ -764,7 +764,7 @@ button {
 
 .kit-sheet-septenary {
   z-index: 4;
-  top: 336px;
+  top: 372px;
   left: 5px;
   right: 18px;
   min-height: 86px;
@@ -774,7 +774,7 @@ button {
 
 .kit-sheet-eighth {
   z-index: 3;
-  top: 392px;
+  top: 434px;
   left: 18px;
   right: 0;
   min-height: 86px;
@@ -784,7 +784,7 @@ button {
 
 .kit-sheet-ninth {
   z-index: 2;
-  top: 448px;
+  top: 496px;
   left: 4px;
   right: 22px;
   min-height: 86px;
@@ -794,7 +794,7 @@ button {
 
 .kit-sheet-tenth {
   z-index: 1;
-  top: 504px;
+  top: 558px;
   left: 15px;
   right: 6px;
   min-height: 86px;
@@ -2580,7 +2580,7 @@ h3,
 
   .kit-stack {
     width: min(252px, 100%);
-    min-height: 600px;
+    min-height: 650px;
     margin-top: 18px;
     margin-right: auto;
     margin-left: auto;
@@ -2597,7 +2597,7 @@ h3,
   }
 
   .kit-sheet-secondary {
-    top: 56px;
+    top: 62px;
     left: 16px;
     right: 0;
     min-height: 86px;
@@ -2605,7 +2605,7 @@ h3,
   }
 
   .kit-sheet-tertiary {
-    top: 112px;
+    top: 124px;
     left: 5px;
     right: 22px;
     min-height: 86px;
@@ -2613,7 +2613,7 @@ h3,
   }
 
   .kit-sheet-quaternary {
-    top: 168px;
+    top: 186px;
     left: 18px;
     right: 0;
     min-height: 86px;
@@ -2621,7 +2621,7 @@ h3,
   }
 
   .kit-sheet-quinary {
-    top: 224px;
+    top: 248px;
     left: 3px;
     right: 20px;
     min-height: 86px;
@@ -2629,7 +2629,7 @@ h3,
   }
 
   .kit-sheet-senary {
-    top: 280px;
+    top: 310px;
     left: 16px;
     right: 4px;
     min-height: 86px;
@@ -2637,7 +2637,7 @@ h3,
   }
 
   .kit-sheet-septenary {
-    top: 336px;
+    top: 372px;
     left: 5px;
     right: 18px;
     min-height: 86px;
@@ -2645,7 +2645,7 @@ h3,
   }
 
   .kit-sheet-eighth {
-    top: 392px;
+    top: 434px;
     left: 18px;
     right: 0;
     min-height: 86px;
@@ -2653,7 +2653,7 @@ h3,
   }
 
   .kit-sheet-ninth {
-    top: 448px;
+    top: 496px;
     left: 4px;
     right: 22px;
     min-height: 86px;
@@ -2661,7 +2661,7 @@ h3,
   }
 
   .kit-sheet-tenth {
-    top: 504px;
+    top: 558px;
     left: 15px;
     right: 6px;
     min-height: 86px;

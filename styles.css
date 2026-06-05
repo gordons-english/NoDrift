@@ -89,6 +89,10 @@ button {
   font-weight: 880;
 }
 
+.title-wordmark {
+  white-space: nowrap;
+}
+
 .nav-links {
   display: flex;
   gap: clamp(16px, 3vw, 34px);

@@ -490,7 +490,7 @@ updateProfileSummary();
     modal.innerHTML = `
       <div class="global-search-dialog">
         <div class="global-search-header">
-          <h2 id="global-search-title">Search NoDrift</h2>
+          <h2 id="global-search-title">Search The Site</h2>
           <button class="global-search-close" type="button" data-search-close aria-label="Close search">×</button>
         </div>
         <div class="global-search-body">
@@ -532,7 +532,7 @@ updateProfileSummary();
     const trimmed = query.trim();
 
     if (!trimmed) {
-      resultsElement.innerHTML = `<p class="global-search-empty">Choose a preset or type a word to search the visible NoDrift pages.</p>`;
+      resultsElement.innerHTML = `<p class="global-search-empty">Choose a preset or type a word to search the visible site pages.</p>`;
       status.textContent = "Type a term or choose a preset. Results link to the closest matching section.";
       more.hidden = true;
       return;

@@ -345,6 +345,10 @@
             writes, codes, or searches through its native platform. NoDrift works on reception: what the active work
             session and user accept, verify, record, correct, reject, or act on after output arrives.
           </p>
+          <p>
+            NoDrift does not attach governance files, memory files, or corrective logs to every outgoing message or
+            conversation turn. Its files stay in the workspace and guide reception, checking, recording, and reporting.
+          </p>
           <ul class="plain-list">
             <li>Source authority: which files, messages, screenshots, or user instructions may be trusted for each claim.</li>
             <li>Decision status: what is approved, proposed, rejected, superseded, unresolved, or only background.</li>
@@ -358,49 +362,46 @@
         </article>
 
         <article class="detail-panel span-two">
-          <h2>How <span class="title-wordmark"><span class="wordmark-no">No</span><span class="wordmark-drift">Drift</span></span> Applies Across LLMs</h2>
+          <h2>How <span class="title-wordmark"><span class="wordmark-no">No</span><span class="wordmark-drift">Drift</span></span> Works Across LLM Tools</h2>
           <p>
-            NoDrift for Codex is the first edition, not the limit of the system. The core NoDrift method does not
-            depend on one model. It depends on whether the AI work environment gives the active work session a way to
-            use rules, preserve records, follow approval boundaries, and maintain project memory.
+            The same NoDrift method can be adapted to Codex, Claude Code, ChatGPT projects and agents, Gemini-style
+            workspaces, DeepSeek-style workspaces, and other LLM tools when the work environment supports persistent
+            instructions, project files, references, or repeatable workflow records.
           </p>
           <p>
-            Codex is the first natural fit because the Codex agent can work directly with local project files,
-            governance documents, memory templates, logs, and website or code artifacts. In this edition, NoDrift gives
-            the Codex agent a structured receiving process: what to verify, what to record, what requires approval, what
+            In Codex, NoDrift uses workspace files, governance documents, memory templates, logs, and website or code
+            artifacts to structure the receiving process: what to verify, what to record, what requires approval, what
             cannot be assumed, and what must be corrected when an error is found.
           </p>
           <p>
-            Claude Code would use the same NoDrift logic through a Claude Code project structure. The Claude Code work
-            session would need access to the NoDrift rules, source register, memory files, approval matrix, error log,
-            and corrective lessons. NoDrift would not change Claude's model behavior. It would govern how the Claude
-            Code session receives output, checks it, records decisions, and prevents unsupported claims from becoming
-            project facts.
+            In Claude Code, the same logic would live in a Claude Code project structure: rules, source register, memory
+            files, approval matrix, error log, and corrective lessons. NoDrift would not change Claude's model behavior.
+            It would govern how the Claude Code session receives output, checks it, records decisions, and prevents
+            unsupported claims from becoming project facts.
           </p>
           <p>
-            ChatGPT projects and agents can use a NoDrift adaptation through project instructions, attached governance
-            files, canvases or topic maps, memory records, and training logs. The same principle applies: ChatGPT may
-            generate the answer, but NoDrift defines how the work session handles that answer after reception.
+            In ChatGPT projects and agents, a NoDrift adaptation can use project instructions, project-level governance
+            files, canvases or topic maps, memory records, and training logs. ChatGPT may generate the answer, but
+            NoDrift defines how the work session handles that answer after reception.
           </p>
           <p>
-            Gemini-style and DeepSeek-style work environments can also use NoDrift where they support persistent
-            instructions, project files, references, or repeatable workflow records. The implementation changes by
-            platform, but the receiving-side job stays the same: preserve the user's intent, separate verified facts
-            from assumptions, keep decisions visible, and stop before actions that need approval.
+            In Gemini-style and DeepSeek-style environments, the implementation changes by platform, but the receiving
+            job stays the same: preserve the user's intent, separate verified facts from assumptions, keep decisions
+            visible, and stop before actions that need approval.
           </p>
           <p>
-            The important distinction is simple: the LLM transmits; NoDrift governs reception. NoDrift does not work
-            inside Codex, Claude Code, ChatGPT, Gemini, or DeepSeek. It gives the active work session and the user a
-            disciplined way to decide what is trusted, what is checked, what is remembered, and what is allowed to move
-            forward.
+            Across all of them, the distinction is simple: the LLM transmits; NoDrift governs reception. NoDrift does
+            not work inside Codex, Claude Code, ChatGPT, Gemini, or DeepSeek, and it does not attach NoDrift files to
+            outgoing turns. The files stay in the workspace while the active session and user decide what is trusted,
+            checked, remembered, and allowed to move forward.
           </p>
         </article>
 
         <article class="detail-panel span-two">
-          <h2>What <span class="title-wordmark"><span class="wordmark-no">No</span><span class="wordmark-drift">Drift</span></span> Provides That LLMs Do Not Usually Enforce By Default</h2>
+          <h2>What <span class="title-wordmark"><span class="wordmark-no">No</span><span class="wordmark-drift">Drift</span></span> Does That LLMs Usually Do Not</h2>
           <p>
-            LLMs are powerful generators and reasoning partners. By default, they are not usually a complete project
-            governance system. NoDrift adds the missing reception structure around the model's output.
+            LLMs are powerful generators and reasoning partners. NoDrift adds the reception discipline that ordinary
+            model output does not usually enforce by itself.
           </p>
           <ul class="plain-list">
             <li>It separates a plausible answer from a verified project fact.</li>
@@ -409,7 +410,8 @@
             <li>It separates a private memory record from public release material.</li>
             <li>It separates a clean confirmed count from incomplete audit coverage.</li>
             <li>It separates a model's ability to act from permission to act.</li>
-            <li>It gives future AI work sessions a required path back to the rules, sources, decisions, incidents, and corrective lessons.</li>
+            <li>It gives future LLM work sessions a required path back to the rules, sources, decisions, incidents, and corrective lessons.</li>
+            <li>It keeps governance files in the workspace instead of adding them to every outgoing turn.</li>
           </ul>
         </article>
 
@@ -429,16 +431,17 @@
           <p>
             It also contains the user-safe Error Training and Defense Shield module, blank incident-record and
             training-log templates, active corrective-lessons register, recurrence review ledger, installation
-            checklist, and concise operations-report template. A user's private incident history is not included.
+            checklist, and concise operations-report template. Each user's own incident history is created privately
+            during use and stays in that user's workspace.
           </p>
         </article>
 
         <article class="detail-panel span-two">
           <h2>Claim Boundary</h2>
           <p>
-            The strongest evidence is usable work density: substantial work was created, organized, reviewed, corrected,
-            and prepared without the project being consumed by drift correction, hallucination cleanup, repeated
-            re-explanation, or unauthorized action.
+            The strongest evidence of reduced rework is usable work density: substantial work was created, organized,
+            reviewed, corrected, and prepared without the project being consumed by drift correction, hallucination
+            cleanup, repeated re-explanation, or unauthorized action.
           </p>
         </article>
       </section>

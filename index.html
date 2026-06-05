@@ -56,7 +56,7 @@
             AI hallucinations get expensive when they are accepted as facts, repeated in memory, or carried into decisions.
           </p>
           <p class="supporting-line">
-            NoDrift gives Codex rules, memory files, and verification checks so unsupported claims are easier to catch before they become rework.
+            NoDrift gives Codex rules, memory files, and verification checks so unsupported claims are easier to catch before they become rework. It does not attach its files to outgoing messages.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <button class="button button-primary" type="button" data-placeholder="No payment link exists yet.">
@@ -182,6 +182,7 @@
           </p>
           <ul class="plain-list">
             <li>It does not change the LLM or guarantee every answer is true.</li>
+            <li>It does not add NoDrift files to outgoing prompts or conversation turns.</li>
             <li>It checks important claims before they become project facts.</li>
             <li>It keeps decisions, open questions, and source boundaries visible.</li>
             <li>It pauses unclear actions until approval is clear.</li>
@@ -362,7 +363,7 @@
             </article>
             <article>
               <h4>Does it control the AI model?</h4>
-              <p>No. NoDrift does not control the LLM itself. It controls what the workspace accepts, labels, verifies, records, and acts on.</p>
+              <p>No. NoDrift does not control the LLM itself and does not attach workspace files to outgoing messages. It controls what the workspace accepts, labels, verifies, records, and acts on after output arrives.</p>
             </article>
             <article>
               <h4>How do I use it after download?</h4>

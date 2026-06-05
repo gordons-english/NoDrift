@@ -545,6 +545,9 @@ button {
 .monitor-top strong {
   color: var(--green);
   font-size: 0.82rem;
+  line-height: 1.25;
+  max-width: 56%;
+  text-align: right;
 }
 
 .system-preview {

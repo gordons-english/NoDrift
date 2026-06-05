@@ -6,13 +6,13 @@
     <title>NoDrift - Full Audit Summary</title>
     <meta
       name="description"
-      content="A NoDrift audit summary explaining activity, output, quality metrics, governance access, and Living Topic Map continuity."
+      content="A NoDrift audit summary explaining activity, output, quality metrics, governance access, corrective training, and Living Topic Map continuity."
     />
     <link rel="canonical" href="https://gordons-english.github.io/no-drift-preview/audit-summary.html" />
     <meta property="og:title" content="NoDrift - Full Audit Summary" />
     <meta
       property="og:description"
-      content="A NoDrift audit summary explaining activity, output, quality metrics, governance access, and Living Topic Map continuity."
+      content="A NoDrift audit summary explaining activity, output, quality metrics, governance access, corrective training, and Living Topic Map continuity."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gordons-english.github.io/no-drift-preview/audit-summary.html" />
@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="NoDrift - Full Audit Summary" />
     <meta
       name="twitter:description"
-      content="A NoDrift audit summary explaining activity, output, quality metrics, governance access, and Living Topic Map continuity."
+      content="A NoDrift audit summary explaining activity, output, quality metrics, governance access, corrective training, and Living Topic Map continuity."
     />
     <link rel="stylesheet" href="styles.css?v=evidence-timeline-1" />
   </head>
@@ -38,7 +38,6 @@
         <a class="active" href="audit-summary.html">Evidence</a>
         <a href="customize.html">Customize</a>
         <a href="best-practices.html">Best Practices</a>
-        <a href="free-preview.html">Free Preview</a>
         <a href="index.html#faq">FAQ</a>
       </nav>
       <a class="header-action" href="index.html#top">Back To Overview</a>
@@ -179,7 +178,7 @@
             monitoring. It is a governed review pattern that Codex applies when the work reaches a decision point.
           </p>
           <ul class="plain-list">
-            <li>Drift away from the user's latest instruction, approved scope, or active project.</li>
+            <li>Drift means the AI response no longer follows the user's latest instruction, approved scope, or recorded project direction.</li>
             <li>Hallucinated facts, unsupported claims, stale assumptions, or invented source details.</li>
             <li>Unauthorized actions such as editing, publishing, committing, uploading, sharing, deleting, or using outside accounts without approval.</li>
             <li>Project contamination from old chats, unrelated folders, private material, or another project's facts.</li>
@@ -192,6 +191,7 @@
             <li>Verification before public claims, file-completion claims, or audit claims are treated as ready.</li>
             <li>Candidate incidents that must stay visible before a final classification is supported.</li>
             <li>Session review coverage before a clean-zero statement is allowed.</li>
+            <li>Repeated comments, previous-turn failures, and avoidably weak or incomplete responses that interrupt productive work.</li>
           </ul>
         </article>
 
@@ -212,31 +212,88 @@
             This prevents an empty incident log from being presented as proof that nothing happened. Confirmed counts,
             candidate status, and review coverage are always reported separately.
           </p>
+          <p>
+            The AI also has an affirmative duty to report an error it recognizes or reasonably suspects. The buyer
+            does not have to discover every problem first.
+          </p>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>The Corrective Training Loop</h2>
+          <p>
+            When the AI recognizes or reasonably suspects an error, it preserves the exact relevant user message and
+            its own response or action. It then identifies the supported error classification, assigns confusion,
+            time-loss, information-loss, and overall impact ratings, prepares the correct response, links the
+            applicable governance rules, and identifies affected work.
+          </p>
+          <p>
+            The complete private incident record remains the evidence. The active corrective lesson tells future
+            chats what to do differently, and the review ledger records whether the correction was verified and
+            whether the failure happened again.
+          </p>
+        </article>
+
+        <article class="detail-panel">
+          <h2>Impact And Criticality</h2>
+          <p>
+            NoDrift applies a 1 to 5 impact rubric to each recorded incident. The user's only required incident
+            event is Critical or Not Critical.
+          </p>
+          <p>
+            Critical stops the affected work and requires direction. Not Critical is recorded and corrected while
+            already authorized work may continue.
+          </p>
+        </article>
+
+        <article class="detail-panel">
+          <h2>The User's Work Stays Small</h2>
+          <p>
+            The user questions anything that does not sound right, makes important decisions, approves consequential
+            actions, and answers Critical or Not Critical.
+          </p>
+          <p>
+            NoDrift performs the routine classification, scoring, governance linking, correction preparation, record
+            maintenance, recurrence review, and reporting. The user can correct any NoDrift classification or score.
+          </p>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>How Reports Protect Continuity</h2>
+          <p>
+            Immediate alerts, task-completion reports, project checkpoints, periodic operations reports, and on-demand
+            reports keep decisions, incidents, corrections, risks, and next actions visible without making the user
+            maintain the system by hand.
+          </p>
+          <p>
+            The reports point back to complete private records. They do not replace the evidence or hide limitations
+            through compressed summaries.
+          </p>
         </article>
 
         <article class="detail-panel span-two">
           <h2>How Governance Is Accessed</h2>
           <p>
             NoDrift does not run as hidden surveillance software. It works through visible governance files,
-            addendums, memory records, source registers, approval rules, and checkpoints that a Codex agent is told
-            to read before acting.
+            addendums, memory records, source registers, approval rules, and checkpoints that the Codex agent uses
+            before acting.
           </p>
           <p>
-            In a governed workspace, the project instructions point the agent to the active addendums first. The agent
-            reads the Codex-specific addendum for file access, tools, permissions, verification, publishing, and
-            stop/go behavior. It then reads the universal governance for drift control, source fidelity, decision
+            In a governed Codex workspace, the project instructions point the Codex agent to the active addendums
+            first. The Codex agent reads the Codex-specific addendum for file access, tools, permissions,
+            verification, publishing, and stop/go behavior. It then reads the universal governance for drift control,
+            source fidelity, decision
             labels, no unauthorized rewriting, and no unauthorized creation.
           </p>
           <p>
-            The rules are actively applied at decision points: when a task begins, before files are inspected, before a
+            The rules are applied at decision points: when a task begins, before files are inspected, before a
             factual claim is made, before edits are made, before old context is reused, before external action, and
             after work is finished for verification.
           </p>
           <ul class="plain-list">
-            <li>A new agent should read the workspace instructions, then the governing addendums, then the project memory and authorized Living Topic Map files.</li>
-            <li>The agent should identify the current task, controlling sources, allowed files, approval status, and verification needed.</li>
-            <li>If the task would edit, publish, commit, upload, send, delete, or use an outside account, the agent must stop for explicit approval.</li>
-            <li>If a claim cannot be tied to a file, screenshot, browser state, tool output, or Don's instruction, it must be marked uncertain.</li>
+            <li>A new Codex agent should read the workspace instructions, governing addendums, project memory, authorized Living Topic Map files, error-training index, and active corrective lessons.</li>
+            <li>The Codex agent should identify the current task, controlling sources, allowed files, approval status, and verification needed.</li>
+            <li>If the task would edit, publish, commit, upload, send, delete, or use an outside account, the Codex agent must stop for explicit approval.</li>
+            <li>If a claim cannot be tied to a file, screenshot, browser state, tool output, or the user's instruction, it must be marked uncertain.</li>
           </ul>
         </article>
 
@@ -256,26 +313,104 @@
             Living Topic Maps are private navigation records. They are not full transcript backups, controlling
             sources, Git branches, or permission to act.
           </p>
+          <p>
+            The error-training records protect a different kind of continuity: what went wrong, what the correct
+            response should have been, what work was affected, and what future chats must do differently.
+          </p>
         </article>
 
         <article class="detail-panel span-two">
           <h2>How This Differs From Agent Memory</h2>
           <p>
-            Codex, Claude Code, and Gemini-style coding agents can use project instructions or memory files. That gives
-            them context. NoDrift adds an operating layer around that context: source authority, decision status,
-            permission gates, risk tracking, Living Topic Maps and branches, evidence records, handoff rules, and
-            verification before claims.
+            Modern LLM tools can remember parts of a conversation, follow project instructions, use files, and work
+            inside coding or writing environments. That context is useful, but context is not the same thing as project
+            control.
           </p>
           <p>
-            In practice, the agent still uses its native instruction system. Codex can use project instructions such as
-            AGENTS.md. Claude Code and Gemini-style tools have their own project-context mechanisms. NoDrift is designed
-            to sit above those mechanisms as the project control system.
+            Memory can help an AI recall what was said. It does not automatically prove which source controls, which
+            decision was approved, which claim was verified, which action needs permission, which tangent belongs in a
+            separate branch, or which previous error must never be repeated.
           </p>
           <p>
             The result is not simply "more memory." It is governed memory: what is true, what is approved, what is
             uncertain, what is risky, what must be checked, what must wait, and what the next agent should read before
             acting.
           </p>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>The NoDrift Reception Layer</h2>
+          <p>
+            NoDrift does not work inside the LLM and does not change what the LLM transmits. The LLM drafts, reasons,
+            writes, codes, or searches through its native platform. NoDrift works on reception: what the active work
+            session and user accept, verify, record, correct, reject, or act on after output arrives.
+          </p>
+          <ul class="plain-list">
+            <li>Source authority: which files, messages, screenshots, or user instructions may be trusted for each claim.</li>
+            <li>Decision status: what is approved, proposed, rejected, superseded, unresolved, or only background.</li>
+            <li>Approval boundaries: which actions require explicit permission before work continues.</li>
+            <li>Verification rules: what must be checked before something is treated as true, complete, fixed, or ready.</li>
+            <li>Continuity records: project state, checkpoints, handoffs, Living Topic Maps, and topic branches.</li>
+            <li>Error training: recognized mistakes become classified, scored, corrected, and preserved as future lessons.</li>
+            <li>Evidence reporting: clean-zero claims, candidate incidents, limits, and audit coverage stay separate.</li>
+            <li>Customization: communication style and token use can change without weakening governance.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>How NoDrift Applies Across LLMs</h2>
+          <p>
+            NoDrift for Codex is the first edition, not the limit of the system. The core NoDrift method does not
+            depend on one model. It depends on whether the AI work environment gives the active work session a way to
+            use rules, preserve records, follow approval boundaries, and maintain project memory.
+          </p>
+          <p>
+            Codex is the first natural fit because the Codex agent can work directly with local project files,
+            governance documents, memory templates, logs, and website or code artifacts. In this edition, NoDrift gives
+            the Codex agent a structured receiving process: what to verify, what to record, what requires approval, what
+            cannot be assumed, and what must be corrected when an error is found.
+          </p>
+          <p>
+            Claude Code would use the same NoDrift logic through a Claude Code project structure. The Claude Code work
+            session would need access to the NoDrift rules, source register, memory files, approval matrix, error log,
+            and corrective lessons. NoDrift would not change Claude's model behavior. It would govern how the Claude
+            Code session receives output, checks it, records decisions, and prevents unsupported claims from becoming
+            project facts.
+          </p>
+          <p>
+            ChatGPT projects and agents can use a NoDrift adaptation through project instructions, attached governance
+            files, canvases or topic maps, memory records, and training logs. The same principle applies: ChatGPT may
+            generate the answer, but NoDrift defines how the work session handles that answer after reception.
+          </p>
+          <p>
+            Gemini-style and DeepSeek-style work environments can also use NoDrift where they support persistent
+            instructions, project files, references, or repeatable workflow records. The implementation changes by
+            platform, but the receiving-side job stays the same: preserve the user's intent, separate verified facts
+            from assumptions, keep decisions visible, and stop before actions that need approval.
+          </p>
+          <p>
+            The important distinction is simple: the LLM transmits; NoDrift governs reception. NoDrift does not work
+            inside Codex, Claude Code, ChatGPT, Gemini, or DeepSeek. It gives the active work session and the user a
+            disciplined way to decide what is trusted, what is checked, what is remembered, and what is allowed to move
+            forward.
+          </p>
+        </article>
+
+        <article class="detail-panel span-two">
+          <h2>What NoDrift Provides That LLMs Do Not Usually Enforce By Default</h2>
+          <p>
+            LLMs are powerful generators and reasoning partners. By default, they are not usually a complete project
+            governance system. NoDrift adds the missing reception structure around the model's output.
+          </p>
+          <ul class="plain-list">
+            <li>It separates a plausible answer from a verified project fact.</li>
+            <li>It separates a suggestion from an approved decision.</li>
+            <li>It separates a useful tangent from the active workstream.</li>
+            <li>It separates a private memory record from public release material.</li>
+            <li>It separates a clean confirmed count from incomplete audit coverage.</li>
+            <li>It separates a model's ability to act from permission to act.</li>
+            <li>It gives future AI work sessions a required path back to the rules, sources, decisions, incidents, and corrective lessons.</li>
+          </ul>
         </article>
 
         <article class="detail-panel span-two">
@@ -289,6 +424,11 @@
             The paid kit contains the installable workspace files: governance templates, project memory templates,
             Living Topic Map global instructions, parent and branch templates, setup prompts, checklists, evidence
             records, incident logs, communication profile structure, and continuation/handoff templates.
+          </p>
+          <p>
+            It also contains the buyer-safe Error Training and Defense Shield module, blank incident-record and
+            training-log templates, active corrective-lessons register, recurrence review ledger, installation
+            checklist, and concise operations-report template. A buyer's private incident history is not included.
           </p>
         </article>
 
@@ -304,7 +444,6 @@
             and prepared without the work being consumed by drift correction, hallucination cleanup, repeated
             re-explanation, or unauthorized action.
           </p>
-          <a class="button button-secondary" href="free-preview.html">View Free Preview</a>
           <a class="button button-secondary" href="customize.html">Customize Your Setup</a>
         </article>
       </section>
@@ -312,8 +451,8 @@
 
     <footer class="site-footer">
       <span>NoDrift - V1 English Codex Edition</span>
-      <span>Created and copyrighted by Don Gordon.</span>
-      <span>Copyright (c) 2026 Don Gordon. All rights reserved.</span>
+      <span>NoDrift. All rights reserved.</span>
+      <span>Copyright (c) 2026.</span>
     </footer>
     <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
     <script src="script.js?v=evidence-timeline-1"></script>

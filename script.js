@@ -308,31 +308,284 @@ updateProfileSummary();
     {
       label: "User-friendly",
       options: [
-        ["How do I start?", "start setup install verify first project"],
-        ["What files do I get?", "workspace files templates governance memory"],
-        ["How do I customize NoDrift?", "customize profile communication token use"],
-        ["What if something sounds wrong?", "does not sound right error review corrective lesson"],
-        ["How does NoDrift protect memory?", "memory continuity checkpoints topic maps"],
-        ["What is the evidence?", "evidence audit confirmed drift hallucination"],
-        ["How do updates work?", "corrective lessons update pack"],
-        ["How do payments work?", "payment"],
-        ["How do I use voice?", "voice planning review best practices"],
-        ["Best practices", "best practices outline go side panel"],
+        {
+          key: "start",
+          label: "How do I start?",
+          query: "start setup workspace files verification prompt first project",
+          answerTitle: "How to start with NoDrift for Codex",
+          answer:
+            "Download the NoDrift workspace starter, unzip it, copy the included workspace files into your Codex workspace folder, open Codex in that workspace, paste the setup prompt, run the verification prompt, customize your working profile, then begin your first project.",
+          links: [
+            { page: "Home", title: "What You Do", url: "index.html#top" },
+            { page: "Home", title: "What NoDrift Does Next", url: "index.html#top" },
+            { page: "Customize", title: "Customize Your Working Profile", url: "customize.html#workflow-settings-heading" },
+            { page: "Best Practices", title: "Start With Clear NoDrift Control Habits", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "files",
+          label: "What files do I get?",
+          query: "workspace files templates governance memory topic maps corrective lessons",
+          answerTitle: "What the NoDrift workspace includes",
+          answer:
+            "The workspace package includes ready-to-copy governance files, approval boundaries, source-register templates, memory templates, Living Topic Maps, incident logs, corrective lessons, verification checklists, setup prompts, and a governed example.",
+          links: [
+            { page: "Home", title: "NoDrift for Codex v1", url: "index.html#top" },
+            { page: "Home", title: "NoDrift Workspace Files", url: "index.html#included" },
+            { page: "Evidence", title: "Paid NoDrift Workspace Includes", url: "audit-summary.html" },
+            { page: "Best Practices", title: "Memory And Decisions", url: "best-practices.html#advanced-heading" },
+          ],
+        },
+        {
+          key: "customize",
+          label: "How do I customize NoDrift?",
+          query: "customize profile communication token use workflow settings",
+          answerTitle: "How customization works",
+          answer:
+            "After the workspace is verified, ask Codex to customize your NoDrift working profile. NoDrift uses the same choices shown on this site: work leadership, question handling, communication detail, update style, teaching level, uncertainty reporting, evidence status, and other working preferences.",
+          links: [
+            { page: "Customize", title: "How NoDrift Works With You", url: "customize.html#workflow-settings-heading" },
+            { page: "Customize", title: "What Affects Estimated Token Use", url: "customize.html#communication-settings-heading" },
+            { page: "Home", title: "Customization And Memory", url: "index.html#included" },
+            { page: "FAQ", title: "FAQ And How It Works", url: "index.html#faq" },
+          ],
+        },
+        {
+          key: "wrong",
+          label: "What if something sounds wrong?",
+          query: "does not sound right error review corrective lesson critical not critical",
+          answerTitle: "What to do when an answer sounds wrong",
+          answer:
+            "Question it politely and directly. NoDrift treats the issue as a candidate error, preserves the relevant exchange, classifies the likely problem, and asks the user to decide whether the incident is Critical or Not Critical before it becomes a corrective lesson.",
+          links: [
+            { page: "Home", title: "Training And Defense Shield", url: "index.html#defense-shield" },
+            { page: "Home", title: "Corrective Lessons Updates", url: "index.html#updates" },
+            { page: "Evidence", title: "Corrective Training Loop", url: "audit-summary.html" },
+            { page: "Best Practices", title: "Question Anything That Does Not Sound Right", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "memory",
+          label: "How does NoDrift protect memory?",
+          query: "memory continuity checkpoints topic maps decisions context",
+          answerTitle: "How NoDrift protects continuity",
+          answer:
+            "NoDrift does not rely on a long chat to remember everything. It keeps decisions, source boundaries, open questions, branches, checkpoints, and corrective lessons in private project-memory records so future sessions can find the current state without rebuilding it from scattered conversation history.",
+          links: [
+            { page: "Home", title: "Living Topic Maps", url: "index.html#topic-maps" },
+            { page: "Evidence", title: "Memory Management Differs", url: "audit-summary.html" },
+            { page: "Best Practices", title: "Preserve Memory And Decisions", url: "best-practices.html#advanced-heading" },
+            { page: "Home", title: "NoDrift Workspace Files", url: "index.html#included" },
+          ],
+        },
+        {
+          key: "evidence",
+          label: "What is the evidence?",
+          query: "evidence audit confirmed drift hallucination candidate coverage",
+          answerTitle: "What the current evidence means",
+          answer:
+            "The public evidence is an early founder evidence snapshot, not a guarantee. It reports measured threads, turns, output density, confirmed issues, candidate incidents, and audit limitations so the claims stay bounded and reviewable.",
+          links: [
+            { page: "Home", title: "Evidence Summary", url: "index.html#proof" },
+            { page: "Evidence", title: "Full Audit Summary", url: "audit-summary.html" },
+            { page: "Evidence", title: "Evidence Snapshots", url: "audit-summary.html#weekly-evidence" },
+            { page: "Home", title: "Claim Boundary", url: "index.html#faq" },
+          ],
+        },
+        {
+          key: "updates",
+          label: "How do updates work?",
+          query: "corrective lessons update pack downloadable current lessons",
+          answerTitle: "How corrective lesson updates work",
+          answer:
+            "When NoDrift improves a correction pattern, the reusable lesson can be published as a buyer-safe update pack. The user can add that update to private project memory without replacing the full governance package or exposing private incident history.",
+          links: [
+            { page: "Home", title: "Corrective Lessons Updates", url: "index.html#updates" },
+            { page: "Download", title: "Corrective Lessons Update Pack", url: "downloads/nodrift-corrective-lessons-update-pack-2026-06-05.md" },
+            { page: "Evidence", title: "Corrective Training Loop", url: "audit-summary.html" },
+            { page: "Best Practices", title: "Review Memory As Diffs", url: "best-practices.html#advanced-heading" },
+          ],
+        },
+        {
+          key: "payments",
+          label: "How do payments work?",
+          query: "payment price coming soon buy NoDrift Codex",
+          answerTitle: "Current payment status",
+          answer:
+            "Payment is not active yet. NoDrift for Codex v1 is listed as coming soon at $99, and the site does not currently collect payment or deliver a paid download path.",
+          links: [
+            { page: "Home", title: "Buy NoDrift For Codex v1", url: "index.html#faq" },
+            { page: "FAQ", title: "Payment And Delivery", url: "index.html#faq" },
+            { page: "Home", title: "NoDrift For Codex v1", url: "index.html#top" },
+          ],
+        },
+        {
+          key: "voice",
+          label: "How do I use voice?",
+          query: "voice planning review best practices dictation setup questions",
+          answerTitle: "How to use voice with NoDrift",
+          answer:
+            "Use your device dictation when explaining a project, answering setup questions, reviewing pages, correcting unclear answers, and planning next steps. On Windows use built-in voice typing, on Mac use Dictation, and on Android use the keyboard microphone. It usually takes about ten minutes to get comfortable; the main obstacle is shyness, not ability.",
+          links: [
+            { page: "Best Practices", title: "Use Voice For Planning And Review", url: "best-practices.html#beginner-heading" },
+            { page: "Best Practices", title: "Read The AI's Writing Actively", url: "best-practices.html#beginner-heading" },
+            { page: "Customize", title: "Communication Settings", url: "customize.html#communication-settings-heading" },
+            { page: "Home", title: "How NoDrift Starts", url: "index.html#top" },
+          ],
+        },
+        {
+          key: "best-practices",
+          label: "Best practices",
+          query: "best practices outline go side panel voice branches review",
+          answerTitle: "The core NoDrift working habits",
+          answer:
+            "Plan before building, ask for an outline before execution, use only go to approve a task, keep separate chats for separate workstreams, use voice when helpful, read and review the AI's writing, and preserve decisions in private memory instead of relying on scrolling.",
+          links: [
+            { page: "Best Practices", title: "Beginner Habits", url: "best-practices.html#beginner-heading" },
+            { page: "Best Practices", title: "Advanced Habits", url: "best-practices.html#advanced-heading" },
+            { page: "Best Practices", title: "Technical Habits", url: "best-practices.html#technical-heading" },
+            { page: "Home", title: "Living Topic Maps", url: "index.html#topic-maps" },
+          ],
+        },
       ],
     },
     {
       label: "Technical",
       options: [
-        ["Reception-only protocol", "reception transmission LLM user authority"],
-        ["LLM transmission vs reception", "LLM transmits NoDrift governs reception"],
-        ["Corrective lessons", "corrective lessons training log incident"],
-        ["Error classifications", "hallucination drift untruth unauthorized contamination"],
-        ["Living Topic Maps", "living topic maps branch registry continuity"],
-        ["Approval gates", "approval external action stop go"],
-        ["Source fidelity", "source fidelity source register authority"],
-        ["Audit coverage", "audit coverage candidate confirmed inconclusive"],
-        ["Workspace file structure", "workspace files project memory governance templates"],
-        ["Cross-LLM operation", "Claude Code Gemini DeepSeek ChatGPT Codex"],
+        {
+          key: "reception-only",
+          label: "Reception-only protocol",
+          query: "reception transmission LLM user authority outgoing messages files prompts",
+          answerTitle: "NoDrift governs reception, not transmission",
+          answer:
+            "The LLM transmits generated output. NoDrift governs what the work session accepts, records, verifies, corrects, and acts on after reception. NoDrift does not attach governance files, memory files, or corrective logs to outgoing messages or conversation turns.",
+          links: [
+            { page: "Evidence", title: "How NoDrift Works Across LLM Tools", url: "audit-summary.html" },
+            { page: "Evidence", title: "What NoDrift Does That LLMs Usually Do Not", url: "audit-summary.html" },
+            { page: "Home", title: "NoDrift Does Not Control AI", url: "index.html#included" },
+            { page: "Customize", title: "NoDrift Does Not Add Files To Turns", url: "customize.html" },
+          ],
+        },
+        {
+          key: "transmission-reception",
+          label: "LLM transmission vs reception",
+          query: "LLM transmits NoDrift governs reception user acceptance verified facts",
+          answerTitle: "Transmission and reception are separate",
+          answer:
+            "The model generates the answer. NoDrift does not change that transmission. NoDrift controls the receiving process: whether a claim is trusted, whether a decision is approved, whether a source is checked, and whether an action is allowed to move forward.",
+          links: [
+            { page: "Home", title: "NoDrift Does Not Control AI", url: "index.html#included" },
+            { page: "Evidence", title: "How NoDrift Works Across LLM Tools", url: "audit-summary.html" },
+            { page: "Evidence", title: "Memory Management Differs", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "corrective-lessons",
+          label: "Corrective lessons",
+          query: "corrective lessons training log incident recurrence review",
+          answerTitle: "What corrective lessons do",
+          answer:
+            "Corrective lessons turn user-confirmed errors into reusable private rules. Each lesson records what went wrong, how to recognize the pattern, which governance rule applies, what the correct behavior should be, and whether the issue recurs.",
+          links: [
+            { page: "Home", title: "Corrective Lessons Updates", url: "index.html#updates" },
+            { page: "Evidence", title: "The NoDrift Corrective Training Loop", url: "audit-summary.html" },
+            { page: "Download", title: "Corrective Lessons Update Pack", url: "downloads/nodrift-corrective-lessons-update-pack-2026-06-05.md" },
+            { page: "Best Practices", title: "Review Memory As Diffs", url: "best-practices.html#advanced-heading" },
+          ],
+        },
+        {
+          key: "error-classifications",
+          label: "Error classifications",
+          query: "hallucination drift untruth unauthorized contamination critical not critical",
+          answerTitle: "How errors are classified",
+          answer:
+            "NoDrift can flag candidate issues such as hallucination, drift, untruth, unauthorized action, contamination, repeated comments, context-loss, or lazy response. The user confirms the incident status and decides whether it is Critical or Not Critical.",
+          links: [
+            { page: "Home", title: "Training And Defense Shield", url: "index.html#defense-shield" },
+            { page: "Evidence", title: "Monitoring And Review", url: "audit-summary.html" },
+            { page: "Evidence", title: "Corrective Training Loop", url: "audit-summary.html" },
+            { page: "Best Practices", title: "Question Anything That Does Not Sound Right", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "topic-maps",
+          label: "Living Topic Maps",
+          query: "living topic maps branch registry continuity decisions branches",
+          answerTitle: "What Living Topic Maps preserve",
+          answer:
+            "Living Topic Maps keep the project path visible: objective, branches, decisions, approved wording, open questions, files, sources, risks, next actions, and status. They reduce scrolling and protect continuity when a chat becomes long.",
+          links: [
+            { page: "Home", title: "Living Topic Maps Protect The Conversation", url: "index.html#topic-maps" },
+            { page: "Evidence", title: "How NoDrift Living Topic Maps Protect Continuity", url: "audit-summary.html" },
+            { page: "Best Practices", title: "Preserve Memory And Decisions", url: "best-practices.html#advanced-heading" },
+          ],
+        },
+        {
+          key: "approval-gates",
+          label: "Approval gates",
+          query: "approval external action stop go permission boundaries",
+          answerTitle: "What approval gates do",
+          answer:
+            "Approval gates stop consequential actions until the user has clearly approved them. They are used for file edits, publishing, uploads, external connections, payment changes, destructive actions, or decisions that change the project direction.",
+          links: [
+            { page: "Home", title: "NoDrift Does Not Control AI", url: "index.html#included" },
+            { page: "Customize", title: "How NoDrift Works With You", url: "customize.html#workflow-settings-heading" },
+            { page: "Best Practices", title: "Use Go To Approve Execution", url: "best-practices.html#beginner-heading" },
+            { page: "Evidence", title: "How Governance Is Accessed", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "source-fidelity",
+          label: "Source fidelity",
+          query: "source fidelity source register authority verified facts",
+          answerTitle: "How source fidelity works",
+          answer:
+            "Source fidelity separates what was actually verified from what merely sounds plausible. NoDrift uses source registers and verification rules so important claims do not become project facts unless the source boundary is clear.",
+          links: [
+            { page: "Home", title: "NoDrift Workspace Files", url: "index.html#included" },
+            { page: "Evidence", title: "What NoDrift Does That LLMs Usually Do Not", url: "audit-summary.html" },
+            { page: "Best Practices", title: "Source Note", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "audit-coverage",
+          label: "Audit coverage",
+          query: "audit coverage candidate confirmed inconclusive evidence snapshot",
+          answerTitle: "What audit coverage means",
+          answer:
+            "Audit coverage describes what was actually reviewed. A clean count is not a universal guarantee. NoDrift separates confirmed incidents, candidate incidents, inconclusive areas, and incomplete coverage so public evidence does not overclaim.",
+          links: [
+            { page: "Evidence", title: "Full Audit Summary", url: "audit-summary.html" },
+            { page: "Evidence", title: "Evidence Snapshots", url: "audit-summary.html#weekly-evidence" },
+            { page: "Home", title: "Evidence Summary", url: "index.html#proof" },
+          ],
+        },
+        {
+          key: "workspace-structure",
+          label: "Workspace file structure",
+          query: "workspace files project memory governance templates source register",
+          answerTitle: "How the workspace files are organized",
+          answer:
+            "The user copies the NoDrift workspace files into the Codex workspace folder. Codex then checks that the governance files, memory templates, source register, approval matrix, topic maps, incident logs, and setup prompts are visible before work begins.",
+          links: [
+            { page: "Home", title: "NoDrift For Codex v1", url: "index.html#top" },
+            { page: "Home", title: "NoDrift Workspace Files", url: "index.html#included" },
+            { page: "Evidence", title: "Paid NoDrift Workspace Includes", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "cross-llm",
+          label: "Cross-LLM operation",
+          query: "Claude Code Gemini DeepSeek ChatGPT Codex LLM tools",
+          answerTitle: "How NoDrift adapts across LLM tools",
+          answer:
+            "NoDrift for Codex is the first edition, not the limit of the system. The same reception-side method can adapt to Claude Code, ChatGPT projects and agents, Gemini-style tools, DeepSeek-style tools, and other workspaces when they support persistent instructions, files, records, or repeatable project procedure.",
+          links: [
+            { page: "Evidence", title: "How NoDrift Works Across LLM Tools", url: "audit-summary.html" },
+            { page: "Home", title: "Pipeline", url: "index.html#faq" },
+            { page: "Home", title: "NoDrift Does Not Control AI", url: "index.html#included" },
+          ],
+        },
       ],
     },
   ];
@@ -342,6 +595,7 @@ updateProfileSummary();
   let searchIndexPromise;
   let searchIndex = [];
   let currentLimit = maximumInitialResults;
+  let activePresetKey = "";
   let highlightedTarget;
 
   function normalizeSearchText(value) {
@@ -359,6 +613,20 @@ updateProfileSummary();
 
   function cleanSearchText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
+  }
+
+  function getSearchPreset(key) {
+    return searchPresets.flatMap((group) => group.options).find((preset) => preset.key === key);
+  }
+
+  function makeSearchExcerpt(text, title) {
+    const source = cleanSearchText(text.replace(title, " "));
+    if (source.length <= 280) return source;
+    const shortened = source.slice(0, 280);
+    const sentenceEnd = Math.max(shortened.lastIndexOf(". "), shortened.lastIndexOf("? "), shortened.lastIndexOf("! "));
+    if (sentenceEnd > 120) return `${shortened.slice(0, sentenceEnd + 1).trim()}...`;
+    const wordEnd = shortened.lastIndexOf(" ");
+    return `${shortened.slice(0, wordEnd > 120 ? wordEnd : 280).trim()}...`;
   }
 
   function stripSearchMarkup(node) {
@@ -402,7 +670,7 @@ updateProfileSummary();
         const container = heading.closest("article, section") || heading.parentElement || heading;
         const text = stripSearchMarkup(container);
         if (text.length < 45) return null;
-        const excerpt = cleanSearchText(text.replace(title, "")).slice(0, 280);
+        const excerpt = makeSearchExcerpt(text, title);
         const id = heading.id || generatedHeadingId(heading, index);
         return {
           page: page.title,
@@ -500,7 +768,7 @@ updateProfileSummary();
               <option value="">Preset searches</option>
             </select>
           </div>
-          <p class="global-search-help" data-search-status>Type a term or choose a preset. Results link to the closest matching section.</p>
+          <p class="global-search-help" data-search-status>Preset questions show a direct answer first. Typed searches show matching sections.</p>
           <div class="global-search-results" data-search-results></div>
           <button class="global-search-more" type="button" data-search-more hidden>Show more results</button>
         </div>
@@ -511,10 +779,10 @@ updateProfileSummary();
     searchPresets.forEach((group) => {
       const optgroup = document.createElement("optgroup");
       optgroup.label = group.label;
-      group.options.forEach(([label, value]) => {
+      group.options.forEach((preset) => {
         const option = document.createElement("option");
-        option.value = value;
-        option.textContent = label;
+        option.value = preset.key;
+        option.textContent = preset.label;
         optgroup.append(option);
       });
       select.append(optgroup);
@@ -523,26 +791,87 @@ updateProfileSummary();
     document.body.append(modal);
   }
 
+  function renderPresetAnswer(preset) {
+    return `
+      <article class="global-search-answer">
+        <span>Direct answer</span>
+        <h3>${escapeHtml(preset.answerTitle)}</h3>
+        <p>${escapeHtml(preset.answer)}</p>
+      </article>
+    `;
+  }
+
+  function renderPresetLinks(preset) {
+    if (!preset.links?.length) return "";
+    return `
+      <div class="global-search-guided-links" aria-label="Best supporting links">
+        <h3>Best supporting links</h3>
+        <div>
+          ${preset.links
+            .map(
+              (link) => `
+                <a class="global-search-guided-link" href="${escapeHtml(link.url)}">
+                  <span>${escapeHtml(link.page)}</span>
+                  <strong>${escapeHtml(link.title)}</strong>
+                </a>
+              `
+            )
+            .join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderSectionResults(entries, query) {
+    return entries
+      .map(
+        (entry) => `
+          <a class="global-search-result" href="${escapeHtml(entry.url)}">
+            <span>${escapeHtml(entry.page)}</span>
+            <strong>${markSearchTerms(entry.title, query)}</strong>
+            <p>${markSearchTerms(entry.excerpt, query)}</p>
+          </a>
+        `
+      )
+      .join("");
+  }
+
   function renderSearchResults(query) {
     const modal = document.querySelector("[data-global-search-modal]");
     if (!modal) return;
     const resultsElement = modal.querySelector("[data-search-results]");
     const status = modal.querySelector("[data-search-status]");
     const more = modal.querySelector("[data-search-more]");
+    const preset = getSearchPreset(activePresetKey);
     const trimmed = query.trim();
+    const effectiveQuery = preset?.query || trimmed;
 
-    if (!trimmed) {
+    if (!trimmed && !preset) {
       resultsElement.innerHTML = `<p class="global-search-empty">Choose a preset or type a word to search the visible site pages.</p>`;
-      status.textContent = "Type a term or choose a preset. Results link to the closest matching section.";
+      status.textContent = "Preset questions show a direct answer first. Typed searches show matching sections.";
       more.hidden = true;
       return;
     }
 
     const ranked = searchIndex
-      .map((entry) => ({ entry, score: scoreSearchEntry(entry, trimmed) }))
+      .map((entry) => ({ entry, score: scoreSearchEntry(entry, effectiveQuery) }))
       .filter((item) => item.score > 0)
       .sort((a, b) => b.score - a.score)
       .map((item) => item.entry);
+
+    if (preset) {
+      const visible = ranked.slice(0, currentLimit === maximumExpandedResults ? 8 : 4);
+      const related = visible.length
+        ? `<h3 class="global-search-related-heading">Related matching sections</h3>${renderSectionResults(visible, effectiveQuery)}`
+        : "";
+
+      resultsElement.innerHTML = `${renderPresetAnswer(preset)}${renderPresetLinks(preset)}${related}`;
+      status.textContent = `Showing a direct answer, ${preset.links?.length || 0} key link${
+        preset.links?.length === 1 ? "" : "s"
+      }${visible.length ? `, and ${visible.length} related section${visible.length === 1 ? "" : "s"}.` : "."}`;
+      more.hidden = ranked.length <= visible.length || currentLimit >= maximumExpandedResults;
+      return;
+    }
 
     const visible = ranked.slice(0, currentLimit);
     status.textContent = ranked.length
@@ -550,17 +879,7 @@ updateProfileSummary();
       : "No matching sections found.";
 
     resultsElement.innerHTML = visible.length
-      ? visible
-          .map(
-            (entry) => `
-              <a class="global-search-result" href="${escapeHtml(entry.url)}">
-                <span>${escapeHtml(entry.page)}</span>
-                <strong>${markSearchTerms(entry.title, trimmed)}</strong>
-                <p>${markSearchTerms(entry.excerpt, trimmed)}</p>
-              </a>
-            `
-          )
-          .join("")
+      ? renderSectionResults(visible, trimmed)
       : `<p class="global-search-empty">No result found for “${escapeHtml(trimmed)}”. Try a broader word or choose a preset.</p>`;
 
     more.hidden = ranked.length <= currentLimit || currentLimit >= maximumExpandedResults;
@@ -580,6 +899,7 @@ updateProfileSummary();
     await loadSearchIndex();
     currentLimit = maximumInitialResults;
     select.value = "";
+    activePresetKey = "";
     renderSearchResults(input.value);
     input.focus();
   }
@@ -631,12 +951,15 @@ updateProfileSummary();
     input.addEventListener("input", () => {
       currentLimit = maximumInitialResults;
       select.value = "";
+      activePresetKey = "";
       renderSearchResults(input.value);
     });
 
     select.addEventListener("change", () => {
       currentLimit = maximumInitialResults;
-      input.value = select.value;
+      activePresetKey = select.value;
+      const preset = getSearchPreset(activePresetKey);
+      input.value = preset?.label || "";
       renderSearchResults(input.value);
       input.focus();
     });
@@ -647,7 +970,7 @@ updateProfileSummary();
     });
 
     modal.addEventListener("click", (event) => {
-      const link = event.target.closest(".global-search-result");
+      const link = event.target.closest(".global-search-result, .global-search-guided-link");
       if (!link) return;
       const destination = new URL(link.href, window.location.href);
       const current = new URL(window.location.href);

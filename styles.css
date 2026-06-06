@@ -348,6 +348,87 @@ button {
   padding: 0 2px;
 }
 
+.global-search-answer {
+  display: grid;
+  gap: 9px;
+  padding: 18px;
+  border: 1px solid rgba(111, 215, 211, 0.42);
+  border-left: 3px solid rgba(111, 215, 211, 0.82);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(111, 215, 211, 0.12), transparent 42%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.global-search-answer span,
+.global-search-guided-links h3,
+.global-search-related-heading {
+  margin: 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.global-search-answer h3 {
+  margin: 0;
+  color: var(--title);
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.global-search-answer p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.52;
+}
+
+.global-search-guided-links {
+  display: grid;
+  gap: 10px;
+}
+
+.global-search-guided-links > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.global-search-guided-link {
+  display: grid;
+  gap: 5px;
+  min-height: 82px;
+  padding: 13px;
+  border: 1px solid rgba(210, 232, 235, 0.14);
+  border-radius: var(--radius);
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.028);
+  text-decoration: none;
+}
+
+.global-search-guided-link:hover,
+.global-search-guided-link:focus-visible {
+  border-color: rgba(111, 215, 211, 0.62);
+  outline: none;
+}
+
+.global-search-guided-link span {
+  color: var(--teal);
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.global-search-guided-link strong {
+  color: var(--title);
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.global-search-related-heading {
+  margin-top: 6px;
+}
+
 .global-search-empty {
   margin: 0;
   padding: 16px;
@@ -505,6 +586,113 @@ button {
   color: var(--muted);
   font-size: 0.88rem;
   text-align: center;
+}
+
+.buyer-path {
+  padding: clamp(38px, 5vw, 64px) 0 clamp(46px, 5vw, 72px);
+  border-top: 1px solid rgba(111, 215, 211, 0.22);
+}
+
+.buyer-path-heading {
+  max-width: 940px;
+  margin-bottom: 22px;
+}
+
+.buyer-path-heading h2 {
+  margin: 0 0 14px;
+  color: var(--title);
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.buyer-path-heading p {
+  max-width: 880px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+
+.buyer-path-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.18fr) minmax(0, 0.92fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.buyer-path-card {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  min-height: 245px;
+  padding: clamp(20px, 2.4vw, 28px);
+  border: 1px solid rgba(210, 232, 235, 0.16);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(111, 215, 211, 0.055), transparent 42%),
+    rgba(255, 255, 255, 0.024);
+}
+
+.buyer-path-card > span {
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.buyer-path-card h3 {
+  margin: 0;
+  color: var(--title);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.12;
+}
+
+.buyer-path-card p,
+.buyer-path-card li {
+  color: var(--muted);
+  line-height: 1.56;
+}
+
+.buyer-path-card p {
+  margin: 0;
+}
+
+.buyer-path-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.buyer-path-card li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.buyer-path-card li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--teal);
+  font-weight: 900;
+}
+
+.buyer-path-compare {
+  grid-row: span 2;
+}
+
+.buyer-path-compare div {
+  padding-top: 2px;
+}
+
+.buyer-path-compare strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 0.96rem;
 }
 
 .workspace-stage {
@@ -2381,6 +2569,14 @@ h3,
     min-height: auto;
   }
 
+  .buyer-path-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .buyer-path-compare {
+    grid-row: auto;
+  }
+
   .system-preview {
     grid-template-columns: 64px 1fr;
   }
@@ -2471,6 +2667,18 @@ h3,
 
   .supporting-line {
     font-size: 0.98rem;
+  }
+
+  .buyer-path {
+    padding: 34px 0 44px;
+  }
+
+  .buyer-path-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-path-card {
+    min-height: auto;
   }
 
   .hero-actions,
@@ -2772,6 +2980,10 @@ h3,
   }
 
   .global-search-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .global-search-guided-links > div {
     grid-template-columns: 1fr;
   }
 

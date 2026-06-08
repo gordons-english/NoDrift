@@ -242,6 +242,21 @@ button {
   letter-spacing: 0;
 }
 
+.global-search-title-block {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  min-width: 0;
+}
+
+.global-search-categories {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
 .global-search-close {
   appearance: none;
   display: inline-flex;
@@ -1753,6 +1768,31 @@ h3,
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   padding: 34px 0 72px;
+}
+
+.troubleshooting-search-jump {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -6px;
+}
+
+.search-box-link {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  color: var(--teal);
+  background: transparent;
+  font: inherit;
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.search-box-link:hover,
+.search-box-link:focus-visible {
+  color: var(--text);
+  outline: none;
 }
 
 .preview-storyboard {

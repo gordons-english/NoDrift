@@ -302,6 +302,7 @@ updateProfileSummary();
     { title: "Evidence", url: "audit-summary.html" },
     { title: "Customize", url: "customize.html" },
     { title: "Best Practices", url: "best-practices.html" },
+    { title: "Troubleshooting", url: "troubleshooting.html" },
   ];
 
   const searchPresets = [
@@ -311,10 +312,10 @@ updateProfileSummary();
         {
           key: "start",
           label: "How do I start?",
-          query: "start setup workspace files verification prompt first project",
+          query: "start begin setup workspace files verification prompt first project profile",
           answerTitle: "How to start with NoDrift for Codex",
           answer:
-            "Download the NoDrift workspace starter, unzip it, copy the included workspace files into your Codex workspace folder, open Codex in that workspace, paste the setup prompt, run the verification prompt, customize your working profile, then begin your first project.",
+            "Download the NoDrift workspace starter, unzip it, copy the included workspace files into your Codex workspace folder, open Codex in that workspace, and send begin. Codex should offer the quick working profiles first, ask about a private topic map if needed, and run optional verification only after stating the scope and expected time.",
           links: [
             { page: "Home", title: "What You Do", url: "index.html#top" },
             { page: "Home", title: "What NoDrift Does Next", url: "index.html#top" },
@@ -339,10 +340,10 @@ updateProfileSummary();
         {
           key: "customize",
           label: "How do I customize NoDrift?",
-          query: "customize profile communication token use workflow settings",
+          query: "customize begin profile communication token use workflow settings",
           answerTitle: "How customization works",
           answer:
-            "After the workspace is verified, ask Codex to customize your NoDrift working profile. NoDrift uses the same choices shown on this site: work leadership, question handling, communication detail, update style, teaching level, uncertainty reporting, evidence status, and other working preferences.",
+            "Start the first Codex chat with begin, or ask Codex to customize NoDrift. Codex should offer the quick working profiles before optional verification. Detailed settings such as work leadership, question handling, communication detail, update style, teaching level, and evidence status can be adjusted later.",
           links: [
             { page: "Customize", title: "How NoDrift Works With You", url: "customize.html#workflow-settings-heading" },
             { page: "Customize", title: "What Affects Estimated Token Use", url: "customize.html#communication-settings-heading" },
@@ -367,10 +368,10 @@ updateProfileSummary();
         {
           key: "memory",
           label: "How does NoDrift protect memory?",
-          query: "memory continuity checkpoints topic maps decisions context",
+          query: "memory continuity checkpoints topic maps decisions context compaction reconciliation",
           answerTitle: "How NoDrift protects continuity",
           answer:
-            "NoDrift does not rely on a long chat to remember everything. It keeps decisions, source boundaries, open questions, branches, checkpoints, and corrective lessons in private project-memory records so future sessions can find the current state without rebuilding it from scattered conversation history.",
+            "NoDrift does not rely on a long chat to remember everything. It keeps decisions, source boundaries, open questions, branches, checkpoints, and corrective lessons in private project-memory records. After compaction, a post-compaction reconciliation audit tells Codex to compare the summary against durable files before relying on earlier decisions.",
           links: [
             { page: "Home", title: "Living Topic Maps", url: "index.html#topic-maps" },
             { page: "Evidence", title: "Memory Management Differs", url: "audit-summary.html" },
@@ -401,7 +402,7 @@ updateProfileSummary();
             "When NoDrift improves a correction pattern, the reusable lesson can be published as a buyer-safe update pack. The user can add that update to private project memory without replacing the full governance package or exposing private incident history.",
           links: [
             { page: "Home", title: "Corrective Lessons Updates", url: "index.html#updates" },
-            { page: "Download", title: "Corrective Lessons Update Pack", url: "downloads/nodrift-corrective-lessons-update-pack-2026-06-05.md" },
+            { page: "Download", title: "Corrective Lessons Update Pack", url: "downloads/nodrift-corrective-lessons-update-pack-2026-06-07.md" },
             { page: "Evidence", title: "Corrective Training Loop", url: "audit-summary.html" },
             { page: "Best Practices", title: "Review Memory As Diffs", url: "best-practices.html#advanced-heading" },
           ],
@@ -434,17 +435,292 @@ updateProfileSummary();
           ],
         },
         {
+          key: "uf-next-step",
+          label: "Need one clear next step?",
+          query: "one clear next step what should i do next simple direct instruction",
+          answerTitle: "Ask for one next move only",
+          answer:
+            "Tell Codex to give you one clear next step and nothing extra. That keeps the work moving without turning the answer into a long detour.",
+          links: [
+            { page: "Best Practices", title: "Use Go For The Approved Task", url: "best-practices.html#beginner-heading" },
+            { page: "Troubleshooting", title: "Start Here", url: "troubleshooting.html#start" },
+          ],
+        },
+        {
+          key: "uf-short-answer",
+          label: "Need a shorter answer?",
+          query: "short answer concise brief summary less detail",
+          answerTitle: "Ask for a shorter reply",
+          answer:
+            "Say you want the short version. Codex should answer plainly, keep the detail tight, and avoid wrapping simple guidance in extra explanation.",
+          links: [
+            { page: "Customize", title: "Communication Settings", url: "customize.html#communication-settings-heading" },
+            { page: "Best Practices", title: "Read The AI's Writing Actively", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "uf-full-answer",
+          label: "Need a fuller answer?",
+          query: "full answer more detail complete explanation why how",
+          answerTitle: "Ask for a fuller explanation",
+          answer:
+            "Say you want more detail and want to understand the reason behind the guidance. Codex should expand the answer without drifting away from the source material.",
+          links: [
+            { page: "Customize", title: "Communication Settings", url: "customize.html#communication-settings-heading" },
+            { page: "Home", title: "FAQ And How It Works", url: "index.html#faq" },
+          ],
+        },
+        {
+          key: "uf-pause-changes",
+          label: "Need to pause before changes?",
+          query: "pause before changes ask before editing files go approval",
+          answerTitle: "Stop before any change happens",
+          answer:
+            "Tell Codex to pause and wait for your approval before changing files, moving work, or touching anything that could affect the current result.",
+          links: [
+            { page: "Troubleshooting", title: "Stop Points", url: "troubleshooting.html#stop-heading" },
+            { page: "Best Practices", title: "Use Go For The Approved Task", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "uf-review-changes",
+          label: "Need to review changes first?",
+          query: "review changes first before editing summary diff what changed",
+          answerTitle: "Ask to see what changed first",
+          answer:
+            "Ask Codex to show the changes before it moves on. That makes it easier to confirm the direction and catch anything that does not belong.",
+          links: [
+            { page: "Best Practices", title: "Review Memory As Diffs", url: "best-practices.html#advanced-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "uf-point-file",
+          label: "Need to point Codex at a file?",
+          query: "exact page file target location path open this file",
+          answerTitle: "Give the exact target",
+          answer:
+            "If you want Codex to work on a particular page or file, give the exact filename, page title, or location so it does not guess at the wrong target.",
+          links: [
+            { page: "Troubleshooting", title: "Wrong Chat Or Folder", url: "troubleshooting.html#triage-heading" },
+            { page: "Home", title: "NoDrift Workspace Files", url: "index.html#included" },
+          ],
+        },
+        {
+          key: "uf-save-style",
+          label: "Need to save a working style?",
+          query: "save working style later profile preferences communication detail",
+          answerTitle: "Save a profile if the style matters",
+          answer:
+            "If you want the same tone, detail level, or pace later, save the working profile so Codex does not have to relearn it in every chat.",
+          links: [
+            { page: "Customize", title: "How NoDrift Works With You", url: "customize.html#workflow-settings-heading" },
+            { page: "Home", title: "Customization And Memory", url: "index.html#included" },
+          ],
+        },
+        {
+          key: "uf-switch-tasks",
+          label: "Need to switch tasks safely?",
+          query: "switch tasks without losing progress separate workstream keep place",
+          answerTitle: "Move to a new task without losing the old one",
+          answer:
+            "Tell Codex to finish the current thought, record the status, and then switch. That keeps the old work from disappearing when a new topic starts.",
+          links: [
+            { page: "Best Practices", title: "Separate Discussion From File Work", url: "best-practices.html#beginner-heading" },
+            { page: "Home", title: "Living Topic Maps", url: "index.html#topic-maps" },
+          ],
+        },
+        {
+          key: "uf-check-source",
+          label: "Need to check the answer against the site?",
+          query: "answer matches website source exact wording check against site",
+          answerTitle: "Match the answer to the site text",
+          answer:
+            "Ask Codex to compare the answer against the site text or private source files before it explains the solution. That keeps the answer tied to the actual NoDrift wording.",
+          links: [
+            { page: "Best Practices", title: "Question Anything That Does Not Sound Right", url: "best-practices.html#beginner-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "uf-scope-check",
+          label: "Need to know what the site covers?",
+          query: "what does the website cover scope limits covered by the pages",
+          answerTitle: "Check the coverage before asking for more",
+          answer:
+            "If you are not sure the site covers a topic, ask Codex to point to the exact page or file that covers it. If there is no supporting source, Codex should say so plainly.",
+          links: [
+            { page: "Troubleshooting", title: "Start Here", url: "troubleshooting.html#start" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
           key: "best-practices",
           label: "Best practices",
-          query: "best practices outline go side panel voice branches review",
+          query: "best practices outline go goal side panel voice branches review",
           answerTitle: "The core NoDrift working habits",
           answer:
-            "Plan before building, ask for an outline before execution, use only go to approve a task, keep separate chats for separate workstreams, use voice when helpful, read and review the AI's writing, and preserve decisions in private memory instead of relying on scrolling.",
+            "Plan before building, use go only for the next described task, use /goal when you want Codex to keep driving toward a defined result, require a coverage table before broad completion claims, keep separate chats for separate workstreams, read and review the AI's writing, and preserve decisions in private memory instead of relying on scrolling.",
           links: [
             { page: "Best Practices", title: "Beginner Habits", url: "best-practices.html#beginner-heading" },
             { page: "Best Practices", title: "Advanced Habits", url: "best-practices.html#advanced-heading" },
             { page: "Best Practices", title: "Technical Habits", url: "best-practices.html#technical-heading" },
             { page: "Home", title: "Living Topic Maps", url: "index.html#topic-maps" },
+          ],
+        },
+        {
+          key: "troubleshooting",
+          label: "Something went wrong",
+          query: "troubleshooting setup wrong folder wrong chat Codex not following rules GitHub publishing",
+          answerTitle: "Start NoDrift troubleshooting",
+          answer:
+            "If something seems wrong while you are already in your NoDrift workspace, type troubleshooting in Codex. The Codex agent should pause forward work, check only what is needed, explain what it found, and ask for go before changing, moving, deleting, publishing, pushing, uploading, or editing anything.",
+          links: [
+            { page: "Troubleshooting", title: "Start Here", url: "troubleshooting.html#start" },
+            { page: "Troubleshooting", title: "Quick Triage", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Type Troubleshooting Before Fixing", url: "best-practices.html#beginner-heading" },
+            { page: "FAQ", title: "What If Something Goes Wrong?", url: "index.html#faq" },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Troubleshooting",
+      options: [
+        {
+          key: "troubleshooting-setup",
+          label: "NoDrift is in the wrong folder",
+          query: "troubleshooting wrong folder wrong drive setup installed correctly missing files",
+          answerTitle: "Check the NoDrift workspace location",
+          answer:
+            "Type troubleshooting: check whether NoDrift is installed correctly. Codex should check the active workspace, root instructions, governance folder, project memory, setup prompts, and intended drive before moving or copying anything.",
+          links: [
+            { page: "Troubleshooting", title: "Setup Problems", url: "troubleshooting.html#triage-heading" },
+            { page: "Home", title: "How To Start", url: "index.html#faq" },
+          ],
+        },
+        {
+          key: "troubleshooting-governance",
+          label: "Codex is not following rules",
+          query: "troubleshooting Codex not following NoDrift rules overclaim invention approval go",
+          answerTitle: "Review NoDrift behavior before continuing",
+          answer:
+            "Type troubleshooting: Codex is not following NoDrift rules. Codex should review the latest instruction, active governance, approval status, source boundaries, and corrective lessons before continuing.",
+          links: [
+            { page: "Troubleshooting", title: "Governance Problems", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Use Go For The Approved Task", url: "best-practices.html#beginner-heading" },
+            { page: "Evidence", title: "Corrective Training Loop", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "troubleshooting-wrong-chat",
+          label: "Work happened in the wrong chat",
+          query: "troubleshooting wrong chat wrong drive misplaced work recovery duplicate files",
+          answerTitle: "Recover misplaced work safely",
+          answer:
+            "Type troubleshooting: work happened in the wrong chat. Codex should identify source, target, duplicate, and uncertain locations before copying, moving, deleting, or replacing anything.",
+          links: [
+            { page: "Troubleshooting", title: "Wrong Chat Or Folder", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Separate Discussion From File Work", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "troubleshooting-coverage",
+          label: "Verification or coverage problem",
+          query: "troubleshooting verification coverage table complete ready publish safe all files every page",
+          answerTitle: "Check whether the claim needs a coverage table",
+          answer:
+            "Type troubleshooting: verification or coverage problem. Codex should identify the claim, implied scope, what was fully read or tested, and what remains unverified before making broad complete, ready, verified, public-safe, or publish-safe claims.",
+          links: [
+            { page: "Troubleshooting", title: "Verification Problems", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Require Coverage Before Broad Claims", url: "best-practices.html#beginner-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "troubleshooting-publishing",
+          label: "GitHub or publishing confusion",
+          query: "troubleshooting GitHub publishing local preview public website metadata push upload",
+          answerTitle: "Separate local preview from publication",
+          answer:
+            "Type troubleshooting: check before GitHub or publishing. Codex should separate local preview, local files, Git repository state, GitHub Pages, public metadata, visual QA, and approval status before any push or publish action.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Publishing", url: "troubleshooting.html#triage-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "troubleshooting-private-public",
+          label: "Public/private boundary risk",
+          query: "troubleshooting public private boundary topic maps governance memory investor files exposure",
+          answerTitle: "Stop before exposing private files",
+          answer:
+            "Type troubleshooting: public private boundary problem. Codex should identify public files, private records, uncertain files, and approval status before publishing, uploading, pushing, sharing, or sending anything.",
+          links: [
+            { page: "Troubleshooting", title: "Public And Private Boundaries", url: "troubleshooting.html#stop-heading" },
+            { page: "Best Practices", title: "Protect Approved Wording", url: "best-practices.html#advanced-heading" },
+          ],
+        },
+        {
+          key: "troubleshooting-startup",
+          label: "begin did not start correctly",
+          query: "troubleshooting begin startup profile topic map verification setup order",
+          answerTitle: "Check the startup sequence",
+          answer:
+            "Type troubleshooting: setup did not start correctly. Codex should check whether profile selection, topic-map choice, optional verification, and the first next directive happened in the expected order.",
+          links: [
+            { page: "Troubleshooting", title: "Startup Problems", url: "troubleshooting.html#triage-heading" },
+            { page: "Customize", title: "Customize Your Working Profile", url: "customize.html#workflow-settings-heading" },
+            { page: "Best Practices", title: "Use Go For The Approved Task", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "troubleshooting-topic-map",
+          label: "Topic map or compaction confusion",
+          query: "troubleshooting topic map compaction summary memory branch continuity reconcile",
+          answerTitle: "Reconcile memory before relying on it",
+          answer:
+            "Type troubleshooting: topic map or compaction problem. Codex should compare the current conversation summary against durable project-memory records before relying on older decisions or moving work forward.",
+          links: [
+            { page: "Troubleshooting", title: "Topic Map Or Compaction", url: "troubleshooting.html#triage-heading" },
+            { page: "Home", title: "Living Topic Maps", url: "index.html#topic-maps" },
+            { page: "Best Practices", title: "Preserve Memory And Decisions", url: "best-practices.html#advanced-heading" },
+          ],
+        },
+        {
+          key: "troubleshooting-preview",
+          label: "Local website preview problem",
+          query: "troubleshooting local preview browser server localhost website page not updating cache",
+          answerTitle: "Separate local preview from the files",
+          answer:
+            "Type troubleshooting: local website preview problem. Codex should check the active local server, browser URL, current website folder, cache-busting tags, and changed files before claiming the page is or is not updated.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Require Coverage Before Broad Claims", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "troubleshooting-next-directive",
+          label: "Codex stopped or skipped go",
+          query: "troubleshooting Codex stopped next directive go approval default leads every turn",
+          answerTitle: "Restore the next directive pattern",
+          answer:
+            "Type troubleshooting: Codex stopped or skipped go. Codex should restate the active task, identify the next directive, and ask for go before consequential changes or the next work step.",
+          links: [
+            { page: "Troubleshooting", title: "Stop Points", url: "troubleshooting.html#stop-heading" },
+            { page: "Best Practices", title: "Use Go For The Approved Task", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "troubleshooting-drive-sync",
+          label: "Drive or sync confusion",
+          query: "troubleshooting drive sync cloud local folder C drive G drive copied duplicated timeout",
+          answerTitle: "Inventory locations before moving anything",
+          answer:
+            "Type troubleshooting: drive or sync confusion. Codex should identify the active workspace, cloud-sync folders, local folders, duplicate copies, and intended target before copying, moving, deleting, or replacing files.",
+          links: [
+            { page: "Troubleshooting", title: "Wrong Chat Or Folder", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Separate Discussion From File Work", url: "best-practices.html#beginner-heading" },
           ],
         },
       ],
@@ -464,6 +740,126 @@ updateProfileSummary();
             { page: "Evidence", title: "What NoDrift Does That LLMs Usually Do Not", url: "audit-summary.html" },
             { page: "Home", title: "NoDrift Does Not Control AI", url: "index.html#included" },
             { page: "Customize", title: "NoDrift Does Not Add Files To Turns", url: "customize.html" },
+          ],
+        },
+        {
+          key: "tech-index-refresh",
+          label: "Search index did not refresh",
+          query: "search index stale not updating after edit cache bust reload",
+          answerTitle: "Reload the page and the search script",
+          answer:
+            "If the search box does not show new results after an edit, refresh the page and confirm the current script version is loaded before checking the preset again.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "tech-empty-modal",
+          label: "Search opens but looks empty",
+          query: "search modal open empty no results blank dialog",
+          answerTitle: "Check the active query or preset",
+          answer:
+            "If the search dialog opens but looks empty, check whether the input is blank, the preset is selected, or the search text is too narrow to return results.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Require Coverage Before Broad Claims", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "tech-cache-bust",
+          label: "Old script still loads",
+          query: "cached script old version cache bust browser still using old file",
+          answerTitle: "Use a fresh asset version",
+          answer:
+            "If the browser still shows an older script or stylesheet, change the cache-busting version string so the browser fetches the latest file instead of the old cached one.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Use Go For The Approved Task", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "tech-missing-page",
+          label: "A page is missing from search",
+          query: "page missing from searchPages list search site index",
+          answerTitle: "Add the page to the search index list",
+          answer:
+            "If a page does not show up in search, add that page to the site search page list so the indexer can read it and surface its sections.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Home", title: "NoDrift Workspace Files", url: "index.html#included" },
+          ],
+        },
+        {
+          key: "tech-anchor-wrong",
+          label: "A section jump lands in the wrong place",
+          query: "hash anchor wrong section generated anchor highlight",
+          answerTitle: "Check the anchor target and section id",
+          answer:
+            "If a section link jumps to the wrong place, check that the anchor text, generated id, and destination hash all point at the same section.",
+          links: [
+            { page: "Troubleshooting", title: "Wrong Chat Or Folder", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Review Memory As Diffs", url: "best-practices.html#advanced-heading" },
+          ],
+        },
+        {
+          key: "tech-responsive-header",
+          label: "Mobile layout crowds the search header",
+          query: "mobile search header overlap responsive spacing categories title",
+          answerTitle: "Tighten the header layout on small screens",
+          answer:
+            "If the search header feels crowded on mobile, reduce the gap, let the title wrap, and keep the category note on its own line when needed.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Use Voice For Planning And Review", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "tech-preset-mismatch",
+          label: "A preset answer does not match the prompt",
+          query: "preset answer mismatch label query direct answer link",
+          answerTitle: "Keep the label, query, and answer aligned",
+          answer:
+            "If a preset feels off, check that the label, search query, direct answer, and supporting links all describe the same problem and response.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "tech-wrong-result",
+          label: "A search preset returns the wrong result",
+          query: "search preset wrong result ranking similar query",
+          answerTitle: "Tune the search terms to the real problem",
+          answer:
+            "If a preset returns the wrong section, narrow the query to the words that uniquely describe the intended problem and remove the extra terms that are pulling in the wrong match.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Best Practices", title: "Question Anything That Does Not Sound Right", url: "best-practices.html#beginner-heading" },
+          ],
+        },
+        {
+          key: "tech-close-modal",
+          label: "The search dialog will not close",
+          query: "close search modal escape backdrop button dialog",
+          answerTitle: "Use the close button or Escape",
+          answer:
+            "If the search dialog stays open, close it with the button or press Escape. If neither works, check whether a script error is blocking the close handler.",
+          links: [
+            { page: "Troubleshooting", title: "Stop Points", url: "troubleshooting.html#stop-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "tech-meta-mismatch",
+          label: "The page title or metadata is wrong",
+          query: "title metadata open graph mismatch page head browser preview",
+          answerTitle: "Update the head tags to match the page",
+          answer:
+            "If the title or metadata is wrong, update the page head tags so the browser title, social metadata, and page content describe the same thing.",
+          links: [
+            { page: "Troubleshooting", title: "GitHub Or Website State", url: "troubleshooting.html#triage-heading" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
           ],
         },
         {
@@ -489,7 +885,7 @@ updateProfileSummary();
           links: [
             { page: "Home", title: "Corrective Lessons Updates", url: "index.html#updates" },
             { page: "Evidence", title: "The NoDrift Corrective Training Loop", url: "audit-summary.html" },
-            { page: "Download", title: "Corrective Lessons Update Pack", url: "downloads/nodrift-corrective-lessons-update-pack-2026-06-05.md" },
+            { page: "Download", title: "Corrective Lessons Update Pack", url: "downloads/nodrift-corrective-lessons-update-pack-2026-06-07.md" },
             { page: "Best Practices", title: "Review Memory As Diffs", url: "best-practices.html#advanced-heading" },
           ],
         },
@@ -526,12 +922,25 @@ updateProfileSummary();
           query: "approval external action stop go permission boundaries",
           answerTitle: "What approval gates do",
           answer:
-            "Approval gates stop consequential actions until the user has clearly approved them. They are used for file edits, publishing, uploads, external connections, payment changes, destructive actions, or decisions that change the project direction.",
+            "Approval gates stop consequential actions until the user has clearly approved them. Codex should state the next directive and ask for go when permission is needed. Approval gates are used for file edits, publishing, uploads, external connections, payment changes, destructive actions, or decisions that change the project direction.",
           links: [
             { page: "Home", title: "NoDrift Does Not Control AI", url: "index.html#included" },
             { page: "Customize", title: "How NoDrift Works With You", url: "customize.html#workflow-settings-heading" },
             { page: "Best Practices", title: "Use Go To Approve Execution", url: "best-practices.html#beginner-heading" },
             { page: "Evidence", title: "How Governance Is Accessed", url: "audit-summary.html" },
+          ],
+        },
+        {
+          key: "goal-mode",
+          label: "Goal mode",
+          query: "goal /goal directed completion keep driving persistence permission approval",
+          answerTitle: "How /goal works",
+          answer:
+            "Use /goal followed by a defined result when you want Codex to keep driving toward that result until it is complete, blocked, unsafe, unclear, outside approval boundaries, or changed by you. Goal mode increases persistence, not permission; sensitive steps still need approval.",
+          links: [
+            { page: "Customize", title: "How NoDrift Works With You", url: "customize.html#workflow-settings-heading" },
+            { page: "Best Practices", title: "Use /goal For Directed Completion", url: "best-practices.html#beginner-heading" },
+            { page: "Home", title: "FAQ", url: "index.html#faq" },
           ],
         },
         {
@@ -561,12 +970,25 @@ updateProfileSummary();
           ],
         },
         {
+          key: "coverage-table",
+          label: "Coverage table",
+          query: "coverage table every page all files complete ready verified public safe publish safe",
+          answerTitle: "When broad claims need a coverage table",
+          answer:
+            "When Codex claims every page, all files, complete, ready, verified, public-safe, or publish-safe, NoDrift requires a coverage table first. The table must show what was fully read, searched, tested, changed, and still unverified. Targeted searches, diffs, syntax checks, and spot checks do not prove full coverage by themselves.",
+          links: [
+            { page: "Best Practices", title: "Require Coverage Before Broad Claims", url: "best-practices.html#beginner-heading" },
+            { page: "Home", title: "What NoDrift Does Next", url: "index.html#top" },
+            { page: "Evidence", title: "Claim Boundary", url: "audit-summary.html" },
+          ],
+        },
+        {
           key: "workspace-structure",
           label: "Workspace file structure",
-          query: "workspace files project memory governance templates source register",
+          query: "workspace files project memory governance templates source register optional verification",
           answerTitle: "How the workspace files are organized",
           answer:
-            "The user copies the NoDrift workspace files into the Codex workspace folder. Codex then checks that the governance files, memory templates, source register, approval matrix, topic maps, incident logs, and setup prompts are visible before work begins.",
+            "The user copies the NoDrift workspace files into the Codex workspace folder. Setup starts lightly with begin and the working-profile choice. When the user asks for verification, Codex states the scope and expected time before checking that governance files, memory templates, source register, approval matrix, topic maps, incident logs, and setup prompts are visible.",
           links: [
             { page: "Home", title: "NoDrift For Codex v1", url: "index.html#top" },
             { page: "Home", title: "NoDrift Workspace Files", url: "index.html#included" },
@@ -576,10 +998,10 @@ updateProfileSummary();
         {
           key: "cross-llm",
           label: "Cross-LLM operation",
-          query: "Claude Code Gemini DeepSeek ChatGPT Codex LLM tools",
+          query: "Claude Code Claude Gemini DeepSeek ChatGPT Codex LLM tools",
           answerTitle: "How NoDrift adapts across LLM tools",
           answer:
-            "NoDrift for Codex is the first edition, not the limit of the system. The same reception-side method can adapt to Claude Code, ChatGPT projects and agents, Gemini-style tools, DeepSeek-style tools, and other workspaces when they support persistent instructions, files, records, or repeatable project procedure.",
+            "NoDrift for Codex is the first edition, not the limit of the system. Claude Code is next, then Claude. The same reception-side method can also adapt to ChatGPT projects and agents, Gemini-style tools, DeepSeek-style tools, and other workspaces when they support persistent instructions, files, records, or repeatable project procedure.",
           links: [
             { page: "Evidence", title: "How NoDrift Works Across LLM Tools", url: "audit-summary.html" },
             { page: "Home", title: "Pipeline", url: "index.html#faq" },
@@ -758,7 +1180,10 @@ updateProfileSummary();
     modal.innerHTML = `
       <div class="global-search-dialog">
         <div class="global-search-header">
-          <h2 id="global-search-title">Search The Site</h2>
+          <div class="global-search-title-block">
+            <h2 id="global-search-title">Search The Site</h2>
+            <p class="global-search-categories">Preset categories: user-friendly, troubleshooting, technical.</p>
+          </div>
           <button class="global-search-close" type="button" data-search-close aria-label="Close search">×</button>
         </div>
         <div class="global-search-body">

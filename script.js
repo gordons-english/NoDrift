@@ -1184,7 +1184,7 @@ updateProfileSummary();
             <h2 id="global-search-title">Search The Site</h2>
             <p class="global-search-categories">Preset categories: user-friendly, troubleshooting, technical.</p>
           </div>
-          <button class="global-search-close" type="button" data-search-close aria-label="Close search">×</button>
+          <button class="global-search-close" type="button" data-search-close aria-label="Close search">x</button>
         </div>
         <div class="global-search-body">
           <div class="global-search-controls">
@@ -1305,7 +1305,7 @@ updateProfileSummary();
 
     resultsElement.innerHTML = visible.length
       ? renderSectionResults(visible, trimmed)
-      : `<p class="global-search-empty">No result found for “${escapeHtml(trimmed)}”. Try a broader word or choose a preset.</p>`;
+      : `<p class="global-search-empty">No result found for "${escapeHtml(trimmed)}". Try a broader word or choose a preset.</p>`;
 
     more.hidden = ranked.length <= currentLimit || currentLimit >= maximumExpandedResults;
   }
